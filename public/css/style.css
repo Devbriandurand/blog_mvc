@@ -1,0 +1,229 @@
+html{
+	width:100%;
+	height: auto;
+}
+body{
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+/*------------ PAGE ACCUEIL ------------*/
+/*---- BARRE DE NAVIGATION ----*/
+nav{
+	width: 100%;
+	height: auto;
+	background-color: #338A9E;
+	border-bottom: 5px solid black;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+#title1{
+	color: black;
+	text-decoration: none;
+}
+#link1{
+	color: black;
+	text-decoration: none;
+}
+ul{
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	flex-direction: row;
+	justify-content: center;
+}
+nav span ul li{
+	transition: all 2s ease;
+	border: 2px solid rgba(0,0,0,.7);
+	font-size: 1.8em;
+	list-style:none;
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 2%;
+}
+nav span ul li:hover{
+	background-color: #154F7F;
+}
+
+
+#titleInscription{
+	font-size: 2.4em;
+	text-align: center;
+	margin-top: 8%;
+	text-shadow: 1px 1px 2px grey;
+	z-index: 17;
+}
+#legendInscription{
+	font-size: 1.3em;
+	font-weight: 600;
+	text-align: center;
+
+}
+.fieldsetRegister{
+	background-color: #88ABC5;
+	border-radius: 5px 5px;
+}
+.formulaireInscription{
+	width:auto;
+	height: auto;
+	padding: 2%;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	z-index: 18;
+}
+#inputRegister{
+	transition: all 1s linear !important;
+	border-radius: 5px 5px;
+}
+#inputRegister:focus{
+	background-color: #9DD17B;
+}
+#titleListPostsView{
+	text-align: center;
+	margin-top: 8%;
+	font-size: 2.4em;
+	text-shadow: 1px 1px 2px grey;
+}
+#derniersBillets{
+	margin-left: 10%;
+}
+#titlePostView{
+	font-size: 2.4em;
+	text-align: center;
+	margin-top: 8%;
+	text-shadow: 1px 1px 2px grey;
+}
+#retourBillet{
+	padding-left: 10%;
+	font-weight: 600;
+	color: rgb(45, 76, 128);
+}
+#retourBillet:hover{
+color: rgb(0, 173, 12);
+}
+
+
+/*MES CHAPITRES*/
+/*ARTICLE*/
+.news{
+	width: 80%;
+	height: 100%;
+	margin:0 auto;
+	margin-bottom: 5%;
+	background-color: #88ABC5;
+	border:1px solid black;
+	border-radius: 5px 5px;
+	text-align: justify-all;
+	padding: 2%;
+}
+#titleBillet{
+	text-align: center;
+	font-size: 1.6em;
+}
+#content{
+	font-weight: 400;
+	color: rgb(0, 0, 0);
+	font-size: 1.5em;
+}
+.containerFormComment{
+	width: 100%;
+	height: auto;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content:center;
+	margin-bottom: 1.5%;
+}
+#titleComment{
+	width: auto;
+	height: auto;
+	text-align: center;
+	font-size: 1.8em;
+	text-shadow: 1px 1px 1px grey;
+	border-bottom: 2mm ridge rgba(97, 102, 93,.8);
+	padding-bottom: 2%;
+}
+
+#formulaireComment{
+	width: 35%;
+	height: auto;
+	margin-top: 1%;
+	margin-right: 2%;
+	float: left;
+}
+#legendFormPost{
+	text-align: center;
+	font-weight: 600;
+}
+
+#containerComment{
+	width: 40%;
+	height: auto;
+	margin-left:10%
+}
+#hrPost{
+	border-bottom: 2mm ridge rgba(97, 102, 93,.8);
+	margin-bottom: 3%;
+}
+
+
+.containerContact{
+	margin-bottom: 10%;
+}
+#titleContact{
+	font-size: 2.4em;
+	text-align: center;
+	margin-top: 8%;
+	text-shadow: 1px 1px 2px grey;  
+
+}
+#fieldsetContact{
+	width: 100%;
+	height: auto;
+}
+ .formContact{
+ 
+    border-radius: 5px 5px;
+    width: 260px;
+    height: 406px;
+    padding: 0 20px;
+    font-family: 'roboto', sans-serif;
+} 
+
+#inputContact{
+transition: all 1s linear !important;
+
+}
+#inputContact:focus{
+background-color: #9DD17B;
+}
+
+#buttonContact{
+	border-radius: 5px 5px;
+}
+
+/*-----------PIED DE PAGE----------*/
+footer{
+	width: auto;
+	height: auto;
+	border: 2px solid black;
+	font-size: 1.2em;
+	font-weight: 600;
+	padding: 1%;
+	background-color: #338A9E;
+	text-align: center;
+}
+
