@@ -1,6 +1,7 @@
 <?php
-require('controller/frontend.php');
-// teste2dfgbfdgffvdcxs
+require('controller/frontend/frontend.php');
+require('controller/backend/backend.php');
+
 try {
     if (isset($_GET['action'])) {
         if ($_GET['action'] == 'listPosts') {
@@ -14,7 +15,7 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
-            elseif ($_GET['action'] == 'addComment') {
+        elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
                     addComment($_GET['id'], $_POST['author'], $_POST['comment']);
@@ -27,15 +28,19 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+        elseif ($_GET['action'] == 'form') {
+                connect();    
+            }
 
-            elseif ($_GET['action'] == 'edit'){
-            if (isset($_GET['id']) && $_GET['id']> 0){
-                comment();
-            }
+        elseif ($_GET['action'] == 'login') {
+            if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
+                    login ($_POST['login'], $_POST['mdp']);
+                }
             else {
-                 throw new Exception('Aucun commentaire correspondant');
-            }
+                    throw new Exception('Tous les champs ne sont pas remplis !');
+                }
         }
+
     }
             else {
                     listPosts();

@@ -1,5 +1,3 @@
-
-Deprecated: The each() function is deprecated. This message will be suppressed on further calls in C:\Users\duran\AppData\Roaming\Sublime Text 3\Packages\PHPTools\php.tools\codeFormatter.php on line 54
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,14 +7,15 @@ Deprecated: The each() function is deprecated. This message will be suppressed o
 	<title>Le super blog de Jean Forteroche></title>
 </head>
 <body>
-<?php ob_start();?>
-<section class="containerContact">
+	<?php ob_start(); ?>
+
+		<section class="containerContact">
 
 			<h1 id="titleContact">CONTACTER MOI</h1>
 
-				<form class="formContact">
+				<form action="contactView.php" method="_POST"  class="formContact">
 					<fieldset id="fieldsetContact">
-						<legend>Contact Info</legend>
+						<legend id="legendContact" align="center"><strong>Contact Info<strong></legend>
 							<p id="infos">
 								<strong>Jean Forteroche Écrivain</strong>
 							<br>25 Rue d'Iréki 75010 Paris
@@ -26,32 +25,32 @@ Deprecated: The each() function is deprecated. This message will be suppressed o
 	 					<table class="tableContact">
 	 						<tr>
 	 							<td>
-	 								<label for="">Nom</label>
+	 								<label for="nom">Nom</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<input id="inputContact" type="text" name="nom">
+	 								<input id="inputContact" type="text" name="nom" placeholder="Saisissez votre nom" required>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<label for>Prénom</label>
+	 								<label for="prenom">Prénom</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<input id="inputContact" type="text" name="Prénom">
+	 								<input id="inputContact" type="text" name="prenom" placeholder="Saisissez votre prenom" required>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<label for>E-mail</label>
+	 								<label for="email">E-mail</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<input id="inputContact" type="email" name="emailContact">
+	 								<input id="inputContact" type="email" name="emailContact" placeholder="Saisissez votre e-mail" required>
 	 							</td>
 	 						</tr>
 	 						<tr>
@@ -61,12 +60,12 @@ Deprecated: The each() function is deprecated. This message will be suppressed o
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<textarea id="inputTextarea" placeholder="Saisissez votre message" rows="10" cols="50"></textarea>
+	 								<textarea id="inputTextarea" placeholder="Saisissez votre message" rows="10" cols="50"required></textarea>
 	 							</td>
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<input id="buttonContact" type="button" name="buttonContact" value="Envoyer">
+	 								<input id="buttonContact" type="submit" name="buttonContact" value="Envoyer">
 	 							</td>
 	 						</tr>
 	 					</table>
@@ -74,8 +73,8 @@ Deprecated: The each() function is deprecated. This message will be suppressed o
 				</form>
 		</section>
 
-<?php $content = ob_get_clean();?>
-<?php require_once ('view/frontend/template.php')?>
+<?php $content = ob_get_clean(); ?>
+<?php require_once('view/frontend/template.php')  ?>
 
 	</body>
 </html>

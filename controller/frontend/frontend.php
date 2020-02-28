@@ -35,9 +35,9 @@ require_once('model/CommentManager.php');
     else {
         header('Location: index.php?action=post&id=' . $postId);
     }
+}
 
- function deletePostComment($id) {
-        $deletedPost = $this->deletePost($id);
-        header('Location: index.php?action=post&id');
-    } 
+function connect(){
+    require('view/frontend/login.php');
+
 }

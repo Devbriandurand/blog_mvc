@@ -7,9 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	<title><?= $title ?></title>
 </head>
-	<body>
-		<?php require('view/frontend/menuNav.php'); ?>
-		<?= $content ?>
-		<?php require('view/frontend/footer.php'); ?>
+	<body class="bodyTemplate">
+
+		<?php require_once('view/frontend/menuNav.php'); ?>
+		<div id="contentTemplate"><?= $content ?></div>
+		<?php require_once('view/frontend/footer.php'); ?>
+
 	</body>
 </html>

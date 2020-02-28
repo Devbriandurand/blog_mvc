@@ -8,10 +8,16 @@ body{
 	margin: 0;
 	padding: 0;
 }
+.bodyTemplate{
+	background-color: grey;
+}
+#contentTemplate{
+	margin-top: 8%;
+}
 /*------------ PAGE ACCUEIL ------------*/
 /*---- BARRE DE NAVIGATION ----*/
 nav{
-	width: 100%;
+	width: 99.8%;
 	height: auto;
 	background-color: #338A9E;
 	border-bottom: 5px solid black;
@@ -54,37 +60,53 @@ nav span ul li:hover{
 	background-color: #154F7F;
 }
 
-
+.sectionRegister{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: grey;
+}
 #titleInscription{
 	font-size: 2.4em;
 	text-align: center;
-	margin-top: 8%;
+	/*margin-top: 8%;*/
 	text-shadow: 1px 1px 2px grey;
 	z-index: 17;
+}
+.formulaireInscription{
+	width:auto;
+	height: 100%;
+	border:1px dashed black;
+	border-radius: 5px 5px;
+	background-color: #88ABC5;
+	margin-top: 3%;
+	margin-bottom: 10%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	padding: 1.5%;
+
+}
+.fieldsetRegister{
+	width: auto;
+	height: 100%;
+	border: 2px solid red;
+	border-radius: 5px 5px;
+	margin-bottom: 2%;
 }
 #legendInscription{
 	font-size: 1.3em;
 	font-weight: 600;
-	text-align: center;
+}
 
-}
-.fieldsetRegister{
-	background-color: #88ABC5;
-	border-radius: 5px 5px;
-}
-.formulaireInscription{
-	width:auto;
-	height: auto;
-	padding: 2%;
-	margin-top: 5%;
-	margin-bottom: 10%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	z-index: 18;
-}
 #inputRegister{
 	transition: all 1s linear !important;
 	border-radius: 5px 5px;
@@ -92,6 +114,24 @@ nav span ul li:hover{
 #inputRegister:focus{
 	background-color: #9DD17B;
 }
+#inputRegisterSend{
+	width: 30%;
+	height: auto;
+	margin-left: 35%;
+	margin-top: 2%;
+	border-radius: 5px 5px;
+	font-family: roboto;
+	font-weight: 500 ;
+}
+
+
+
+
+
+
+
+
+
 #titleListPostsView{
 	text-align: center;
 	margin-top: 8%;
@@ -141,10 +181,10 @@ color: rgb(0, 173, 12);
 }
 .containerFormComment{
 	width: 100%;
-	height: auto;
+	height: 100%;
 	display: inline-flex;
 	flex-direction: row;
-	justify-content:center;
+	justify-content:space-around;
 	margin-bottom: 1.5%;
 }
 #titleComment{
@@ -158,57 +198,87 @@ color: rgb(0, 173, 12);
 }
 
 #formulaireComment{
-	width: 35%;
-	height: auto;
-	margin-top: 1%;
+	width: 40%;
+	height: 50%;
+	margin-top: 2%;
 	margin-right: 2%;
 	float: left;
+	background-color: #88ABC5;
+	border-radius: 5px 5px;
+	padding: 2%;
+}
+#fieldsetPost{
+	border: 1px solid red;
+	border-radius: 5px 5px;
 }
 #legendFormPost{
-	text-align: center;
 	font-weight: 600;
 }
 
 #containerComment{
-	width: 40%;
-	height: auto;
-	margin-left:10%
+	width: 30%;
+	height: 40%;
+	border-radius: 5px 5px;
+	background-color: #ffffff;
+	border: 1px solid black;
+	font-size:.9em;
+	margin-top: 2%;
+	padding: 2%;
 }
 #hrPost{
 	border-bottom: 2mm ridge rgba(97, 102, 93,.8);
 	margin-bottom: 3%;
 }
 
-
 .containerContact{
-	margin-bottom: 10%;
+	width: 100%;
+	height: 100%;
+	margin-top: 8%;
+	margin-bottom: 6%;
 }
 #titleContact{
 	font-size: 2.4em;
 	text-align: center;
-	margin-top: 8%;
+	margin-top: 2%;
 	text-shadow: 1px 1px 2px grey;  
 
-}
-#fieldsetContact{
-	width: 100%;
-	height: auto;
-}
- .formContact{
- 
-    border-radius: 5px 5px;
-    width: 260px;
-    height: 406px;
-    padding: 0 20px;
-    font-family: 'roboto', sans-serif;
 } 
+.formContact{
+    width: 100%;
+    height: 100%;
+    font-family: 'roboto', sans-serif;
+    border-radius: 5px 5px;
+    display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+} 
+#fieldsetContact{
+	width: 26%;
+	height: auto;
+	background-color: #88ABC5;
+	border-radius: 5px 5px;
+
+}
+#legendContact{
+	font-size: 1.2em;
+}	
 
 #inputContact{
 transition: all 1s linear !important;
-
+width: 98%;
+height: auto;
 }
 #inputContact:focus{
 background-color: #9DD17B;
+}
+#inputTextarea{
+transition: all 1s linear !important;
+}
+#inputTextarea:focus{
+background-color: #CCD8C9;
 }
 
 #buttonContact{

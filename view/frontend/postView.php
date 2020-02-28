@@ -20,11 +20,11 @@
 
 <h2 id="titleComment">Commentaires</h2>
 
-<span class="containerFormComment">
+<div class="containerFormComment">
 
 <form id="formulaireComment" action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
-    <fieldset>
-        <legend id="legendFormPost">LAISSER MOI VOTRE AVIS</legend>
+    <fieldset id="fieldsetPost">
+        <legend align="center" id="legendFormPost">LAISSER MOI VOTRE AVIS</legend>
         <table>
         <tr>
             <td>
@@ -33,7 +33,7 @@
          </tr>
         <tr>
             <td>
-                <input type="text" name="author" placeholder="Pseudo">
+                <input size="79" type="text" name="author" placeholder="Pseudo">
             </td>
         </tr>
         <tr>
@@ -56,18 +56,18 @@
 </form>
 
 
-<div id='containerComment'>
+<span id='containerComment'>
 <?php
 while ($comment = $comments->fetch())
 {
 ?>
-    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] .  ' <input type=button value="modifier"'. '<span>|</span>'.'<span><input type=button value="supprimer" </span>'  ?></p>
-    <p><?= nl2br(htmlspecialchars($comment['comment'])) . '<br>' .'<hr>' ?></p>
+    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] .' <span><input type=button value="supprimer" </span>'  ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) .'<hr>' ?></p>
 <?php
 }
 ?>
-</div>
 </span>
+</div>
 <hr id="hrPost">
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

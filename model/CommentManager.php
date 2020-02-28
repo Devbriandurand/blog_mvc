@@ -23,6 +23,7 @@ class CommentManager extends Manager
 
         return $affectedLines;
     }
+
     public function deleteComment($id)
     {
         $db = $this->dbConnect();
