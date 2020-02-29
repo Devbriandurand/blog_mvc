@@ -36,6 +36,6 @@ function addComment($postId, $author, $comment) {
 }
 
 function connect() {
-	require ('view/frontend/login.php');
+	require ('view/frontend/loginView.php');
 
 }

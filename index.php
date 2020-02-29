@@ -32,13 +32,17 @@ try {
                 connect();    
             }
 
-        elseif ($_GET['action'] == 'login') {
-            if (!empty($_POST['login']) && !empty($_POST['mdp'])) {
-                    login ($_POST['login'], $_POST['mdp']);
+        elseif ($_GET['action'] == 'username') {
+            if (!empty($_POST['username']) && !empty($_POST['mdp'])) {
+                    login($_POST['username'], $_POST['mdp']);
                 }
             else {
                     throw new Exception('Tous les champs ne sont pas remplis !');
                 }
+        }
+
+        elseif ($_GET['action'] == 'formInscritpion') {
+            connect();
         }
 
     }

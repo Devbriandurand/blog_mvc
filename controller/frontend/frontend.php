@@ -38,6 +38,6 @@ require_once('model/CommentManager.php');
 }
 
 function connect(){
-    require('view/frontend/login.php');
+    require('view/frontend/loginView.php');
 
 }

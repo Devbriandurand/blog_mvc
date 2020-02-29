@@ -9,9 +9,9 @@
 </head>
 	<body class="bodyTemplate">
 
-		<?php require_once('view/frontend/menuNav.php'); ?>
+		<?php require('menuNav.php'); ?>
 		<div id="contentTemplate"><?= $content ?></div>
-		<?php require_once('view/frontend/footer.php'); ?>
+		<?php require('footer.php'); ?>
 
 	</body>
 </html>

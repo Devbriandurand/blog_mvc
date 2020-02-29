@@ -38,6 +38,11 @@ nav{
 	color: black;
 	text-decoration: none;
 }
+#spanMenuNav{
+	width: 40%;
+	height: auto;
+	margin-left: 1%;
+}
 ul{
 	width: 100%;
 	height: auto;
@@ -45,21 +50,26 @@ ul{
 	flex-direction: row;
 	justify-content: center;
 }
-nav span ul li{
+
+nav #spanMenuNav ul li{
 	transition: all 2s ease;
 	border: 2px solid rgba(0,0,0,.7);
-	font-size: 1.8em;
+	font-size: 1.4em !important;
 	list-style:none;
 	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
 	padding: 2%;
+	margin-right: 2%;
 }
-nav span ul li:hover{
+nav #spanMenuNav ul li:hover{
 	background-color: #154F7F;
 }
 
+/*PAGE INSCRIPTION*/
 .sectionRegister{
 	width: 100%;
 	height: auto;
@@ -76,7 +86,6 @@ nav span ul li:hover{
 	text-align: center;
 	/*margin-top: 8%;*/
 	text-shadow: 1px 1px 2px grey;
-	z-index: 17;
 }
 .formulaireInscription{
 	width:auto;
@@ -93,7 +102,6 @@ nav span ul li:hover{
 	align-content: center;
 	align-items: center;
 	padding: 1.5%;
-
 }
 .fieldsetRegister{
 	width: auto;
@@ -124,14 +132,29 @@ nav span ul li:hover{
 	font-weight: 500 ;
 }
 
+/*PAGE DE LOGIN/CONNEXION*/
+#titleLogin{
+font-size: 2.4em;
+text-shadow: 1px 1px 2px grey;
+margin-top: 8%;
+text-align: center;
+}
+.formLogin{
+display:flex;
+flex-direction: center;
+justify-content: center;
+   margin-bottom: 2%;
+}
+#legendLogin{
+	font-size: 1.3em;
+}
+#imgLogin{
+	width: 100%;
+	height: auto;
+}
 
 
-
-
-
-
-
-
+/*PAGE DE BLOG*/
 #titleListPostsView{
 	text-align: center;
 	margin-top: 8%;
@@ -179,6 +202,9 @@ color: rgb(0, 173, 12);
 	color: rgb(0, 0, 0);
 	font-size: 1.5em;
 }
+
+
+/*PAGE COMMENTAIRES*/
 .containerFormComment{
 	width: 100%;
 	height: 100%;
@@ -230,6 +256,7 @@ color: rgb(0, 173, 12);
 	margin-bottom: 3%;
 }
 
+/*PAGE DE CONTACT*/
 .containerContact{
 	width: 100%;
 	height: 100%;
@@ -246,7 +273,6 @@ color: rgb(0, 173, 12);
 .formContact{
     width: 100%;
     height: 100%;
-    font-family: 'roboto', sans-serif;
     border-radius: 5px 5px;
     display: inline-flex;
 	flex-wrap: wrap;
@@ -260,10 +286,9 @@ color: rgb(0, 173, 12);
 	height: auto;
 	background-color: #88ABC5;
 	border-radius: 5px 5px;
-
 }
 #legendContact{
-	font-size: 1.2em;
+	font-size: 1.3em;
 }	
 
 #inputContact{
