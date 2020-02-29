@@ -1,0 +1,45 @@
+
+Deprecated: The each() function is deprecated. This message will be suppressed on further calls in C:\Users\duran\AppData\Roaming\Sublime Text 3\Packages\PHPTools\php.tools\codeFormatter.php on line 54
+<?php
+require ('controller/frontend/frontend.php');
+require ('controller/backend/backend.php');
+
+try {
+	if (isset($_GET['action'])) {
+		if ($_GET['action'] == 'listPosts') {
+			listPosts();
+		} elseif ($_GET['action'] == 'post') {
+			if (isset($_GET['id']) && $_GET['id'] > 0) {
+				post();
+			} else {
+				throw new Exception('Aucun identifiant de billet envoyé');
+			}
+		} elseif ($_GET['action'] == 'addComment') {
+			if (isset($_GET['id']) && $_GET['id'] > 0) {
+				if (!empty($_POST['author']) && !empty($_POST['comment'])) {
+					addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+				} else {
+					throw new Exception('Tous les champs ne sont pas remplis !');
+				}
+			} else {
+				throw new Exception('Aucun identifiant de billet envoyé');
+			}
+		} elseif ($_GET['action'] == 'form') {
+			connect();
+		} elseif ($_GET['action'] == 'username') {
+			if (!empty($_POST['username']) && !empty($_POST['mdp'])) {
+				login($_POST['username'], $_POST['mdp']);
+			} else {
+				throw new Exception('Tous les champs ne sont pas remplis !');
+			}
+		} elseif ($_GET['action'] == 'formInscritpion') {
+			connect();
+		}
+
+	} else {
+		listPosts();
+	}
+}
+ catch (Exception $e) {
+	echo 'Erreur : '.$e->getMessage();
+}
