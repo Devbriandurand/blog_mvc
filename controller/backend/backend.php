@@ -24,7 +24,7 @@ require_once('controller/frontend/frontend.php');
     $log = new \OpenClassrooms\Blog\Model\UserManager();
     $verify = $log->verify($username, $mdp); 
     if ($verify['admin'] == 1) {
-        header('Location: index.php?action=administration');
+        header('Location: index.php?action=administration.php');
     } 
     elseif (isset($verify['admin']))
     {

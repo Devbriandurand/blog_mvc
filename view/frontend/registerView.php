@@ -55,12 +55,30 @@
                                         placeholder="Confirmation de votre mot de passe">
                                 </td>
                             </tr>
-                            <br />
-
+                            <tr>
+                                <td> <input id="inputRegisterSend" type="submit" name="submitInscription"
+                                        value="M'inscrire">
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <a href="index.php?action=connexion">
+                                        <strong>Vous êtes déjà membre ?</strong>
+                                    </a>
+                                </td> -->
+                            </tr>
                         </table>
-                        <input id="inputRegisterSend" type="submit" name="submitInscription" value="M'inscrire">
                     </fieldset>
+                    <div class=containerLinkConnexion>
+                        <a href="index.php?action=connexion">
+                            <strong>Vous êtes déjà membre ?</strong>
+                        </a>
+                    </div>
                 </form>
+
             </section>
             <?php $content = ob_get_clean(); ?>
             <?php require('view/frontend/template.php');  ?>
