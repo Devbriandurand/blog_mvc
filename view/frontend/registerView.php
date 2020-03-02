@@ -60,15 +60,6 @@
                                         value="M'inscrire">
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td align="center">
-                                    <a href="index.php?action=connexion">
-                                        <strong>Vous êtes déjà membre ?</strong>
-                                    </a>
-                                </td> -->
                             </tr>
                         </table>
                     </fieldset>
