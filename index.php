@@ -15,6 +15,7 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+
         elseif ($_GET['action'] == 'addComment') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['author']) && !empty($_POST['comment'])) {
@@ -28,29 +29,54 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
-        elseif ($_GET['action'] == 'form') {
-                connect();    
+
+        elseif($_GET['action'] == 'inscription')
+        {
+            if(isset($_POST['submitInscription']))
+            {
+                if(isset($_POST['pseudo']) && $_POST['password'])
+                {
+                    if(!empty($_POST['pseudo']) OR !empty($_POST['password']) OR !empty($_POST['password2']))
+                    {
+                        Member($_POST['pseudo'],$_POST['password']);
+                    }   
+                }   else {
+                        throw new Exception('Veuillez saisir tous les champs !');
+                }  
+            } else{
+                afficherRegisterView();    
             }
-
-        elseif ($_GET['action'] == 'username') {
-            if (!empty($_POST['username']) && !empty($_POST['mdp'])) {
-                    login($_POST['username'], $_POST['mdp']);
-                }
-            else {
-                    throw new Exception('Tous les champs ne sont pas remplis !');
-                }
         }
 
-        elseif ($_GET['action'] == 'formInscritpion') {
-            connect();
-        }
 
+        elseif ($_GET['action'] == 'connexion')
+        {
+           if(isset($_POST['submitConnexion']))
+           {
+               if(isset($_POST['username']) && $_POST['mdp'])
+               {
+                   if(!empty($_POST['username']) OR !empty($_POST['mdp']))
+                   {
+                       login($_POST['username'], $_POST['mdp']);
+                   } 
+                   else 
+                   {
+                       throw new Exception('Veuillez saisir tous les champs !');
+                   } 
+               } 
+           } 
+           else 
+           {
+               afficherLoginView();
+           } 
+        } 
     }
-            else {
-                    listPosts();
-                }
-        }
-catch(Exception $e) {
-    echo 'Erreur : ' . $e->getMessage();
-}
+                else {
+                        listPosts();
+                    }
 
+    }   catch(Exception $e) 
+    
+     {
+        echo 'Erreur : ' . $e->getMessage();
+     }

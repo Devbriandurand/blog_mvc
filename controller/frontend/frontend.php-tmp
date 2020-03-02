@@ -35,7 +35,10 @@ function addComment($postId, $author, $comment) {
 	}
 }
 
-function connect() {
+function afficherLoginView() {
 	require ('view/frontend/loginView.php');
+}
 
+function afficherRegisterView() {
+	require ('view/frontend/registerView.php');
 }

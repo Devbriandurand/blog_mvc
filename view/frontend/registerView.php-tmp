@@ -31,50 +31,29 @@ Deprecated: The each() function is deprecated. This message will be suppressed o
                     </td>
                 </tr>
                 <tr>
-                    <td align='left'>
-                        <label for="mail"><strong>E-mail</strong></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input size="60" id="inputRegister" type="text" name="mail" value="<?php if (isset($mail)) {echo $mail;}?>"placeholder="Saisissez un email">
-                    </td>
-                </tr>
-                <tr>
-                    <td align='left'>
-                        <label for="mail"><strong>Confirmation E-mail</strong></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input size="60" id="inputRegister" type="text" name="mail2" placeholder="Confirmer votre email">
-                    </td>
-                </tr>
-                <tr>
                     <td align="left">
-                        <label><strong>Mot de passe</strong></label>
+                        <label for="password"><strong>Mot de passe</strong></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input size="60" id="inputRegister" type="password" name="mdp" placeholder="Saisissez votre mot de passe">
+                        <input size="60" id="inputRegister" type="password" name="password" placeholder="Saisissez votre mot de passe">
+                    </td>
+                </tr>
+                 <tr>
+                    <td align="left">
+                        <label for="password2"><strong>Confirmation du mot de passe</strong></label>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <label><strong>Confirmer mot de passe</strong></label>
+                        <input size="60" id="inputRegister" type="password" name="password2" placeholder="Confirmation de votre mot de passe">
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <input size="60" id="inputRegister" align="center" type="password" name="mdp2" placeholder="Saisissez votre mot de passe">
-                    </td>
-                </tr>
-                <tr>
             <br/>
 
             </table>
-            <input id="inputRegisterSend" type="submit" name="FormInscription" value="M'inscrire">
+            <input id="inputRegisterSend" type="submit" name="submitInscription" value="M'inscrire">
         </fieldset>
     </form>
     </section>

@@ -37,7 +37,10 @@ require_once('model/CommentManager.php');
     }
 }
 
-function connect(){
+function afficherLoginView(){
     require('view/frontend/loginView.php');
+}
 
+function afficherRegisterView(){
+    require('view/frontend/registerView.php');
 }
