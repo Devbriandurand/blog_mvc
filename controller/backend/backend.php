@@ -36,10 +36,6 @@ require_once('controller/frontend/frontend.php');
 }
 
 
-
-
-
-
    function Member($pseudo, $password)
 {
     $mbr = new \OpenClassrooms\Blog\Model\UserManager();
@@ -48,10 +44,11 @@ require_once('controller/frontend/frontend.php');
      if($affectedLines)
      {
         header('Location: index.php');
-     } 
-     else
-     {
-         throw new Exception('Erreur d\'insertion dans la base de données');
-     }
-     
+         echo "Bonjour ". $_POST['pseudo'];
+}
+else
+{
+throw new Exception('Erreur d\'insertion dans la base de données');
+}
+
 }

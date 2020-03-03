@@ -12,7 +12,6 @@
 <h1 id="titleListPostsView">MES BILLETS !</h1>
 <p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
 
-
 <?php
 while ($data = $posts->fetch())
 {

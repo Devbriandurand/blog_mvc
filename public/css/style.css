@@ -70,31 +70,23 @@ nav #spanMenuNav ul li:hover{
 }
 
 /*PAGE INSCRIPTION*/
-.sectionRegister{
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	background-color: grey;
-}
+
 #titleInscription{
 	font-size: 2.4em;
 	text-align: center;
-	/*margin-top: 8%;*/
+	margin-left: 2%;
 	text-shadow: 1px 1px 2px grey;
 }
+
 .formulaireInscription{
-	width:auto;
+	width:30%;
 	height: 100%;
 	border:1px dashed black;
 	border-radius: 5px 5px;
 	background-color: #88ABC5;
-	margin-top: 3%;
+	margin-top: 6%;
 	margin-bottom: 10%;
+	margin-left: 35%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -105,9 +97,10 @@ nav #spanMenuNav ul li:hover{
 }
 .fieldsetRegister{
 	width: auto;
-	height: 100%;
+	height: auto;
 	border: 2px solid red;
 	border-radius: 5px 5px;
+	padding: 1%;
 	margin-bottom: 2%;
 }
 #legendInscription{
@@ -116,6 +109,8 @@ nav #spanMenuNav ul li:hover{
 }
 
 #inputRegister{
+	width: 98%;
+	height: auto;
 	transition: all 1s linear !important;
 	border-radius: 5px 5px;
 }
@@ -131,6 +126,9 @@ nav #spanMenuNav ul li:hover{
 	font-family: roboto;
 	font-weight: 500 ;
 }
+.containerLinkConnexion{
+	margin-top: 2%;
+}
 
 /*PAGE DE LOGIN/CONNEXION*/
 #titleLogin{
@@ -145,6 +143,12 @@ flex-direction: center;
 justify-content: center;
    margin-bottom: 2%;
 }
+
+.fieldsetLogin{
+	width: auto;
+	height: auto;
+	border: 1px solid red;
+}
 #legendLogin{
 	font-size: 1.3em;
 }
@@ -152,7 +156,10 @@ justify-content: center;
 	width: 100%;
 	height: auto;
 }
-
+.containerLinkRegister{
+	margin-top: 2%;
+	text-align:center;
+}
 
 /*PAGE DE BLOG*/
 #titleListPostsView{

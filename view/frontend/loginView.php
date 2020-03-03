@@ -15,15 +15,20 @@
 
     <form class="formLogin" action="index.php?action=connexion" method="POST">
 
-        <fieldset>
+        <fieldset class="fieldsetLogin">
             <legend id="legendLogin" align='center'><strong>Connexion</strong></legend>
             <label for="username"><strong>Login</strong></label>
             <input type="text" name="username">
             <label><strong>Mot de passe</strong></label>
             <input type="password" name="mdp">
             <input type="submit" name="submitConnexion">
+            <div class=containerLinkRegister>
+                        <a href="index.php?action=inscription">
+                            <strong>Vous n'êtes pas encore membre ?</strong>
+                        </a>
+                    </div>
         </fieldset>
-
+                    
     </form>
     <div id="containerImgLogin"><img id="imgLogin" src="public/images/imgAlaskas.jpg"></div>
     <?php $content = ob_get_clean(); ?>

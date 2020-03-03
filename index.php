@@ -29,6 +29,10 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
+        elseif ($_GET['action'] == 'editComment')
+        {
+
+        }
 
         elseif($_GET['action'] == 'inscription')
         {
@@ -48,8 +52,7 @@ try {
             }
         }
 
-
-        elseif ($_GET['action'] == 'connexion')
+   elseif ($_GET['action'] == 'connexion')
         {
            if(isset($_POST['submitConnexion']))
            {
@@ -58,6 +61,9 @@ try {
                    if(!empty($_POST['username']) OR !empty($_POST['mdp']))
                    {
                        login($_POST['username'], $_POST['mdp']);
+                        if(isset($_GET['username'])){
+                            echo 'Bonjour ' . $_POST['username'];
+                        }
                    } 
                    else 
                    {
