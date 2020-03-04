@@ -1,7 +1,6 @@
 
 <?php
 session_start();
-
 require ('controller/frontend/frontend.php');
 require ('controller/backend/backend.php');
 

@@ -1,5 +1,4 @@
 <?php
-
 // Chargement des classes
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
@@ -22,8 +21,11 @@ require_once('controller/frontend/frontend.php');
  function login($username, $mdp)
 {
     $log = new Brian\Blog\Model\UserManager();
-    $verify = $log->verify($username, $mdp); 
-    if ($verify['admin'] == 1) {
+    $verify = $log->verify($username, $mdp);
+    if ($verify['admin'] == 1)
+    {
+        $_SESSION['admin'] = 1;
+        $_SESSION['pseudo'] = $verify['pseudo'];
         header('Location: index.php?action=administration');
     } 
     elseif (isset($verify['admin']))
@@ -40,11 +42,11 @@ require_once('controller/frontend/frontend.php');
 {
     $mbr = new Brian\Blog\Model\UserManager();
     $affectedLines = $mbr->addmember($pseudo, $password);
-    
+
      if($affectedLines)
-     {
+    {
         header('Location: index.php');
-}
+    }
 else
 {
 throw new Exception('Erreur d\'insertion dans la base de données');
@@ -55,4 +57,4 @@ throw new Exception('Erreur d\'insertion dans la base de données');
 function afficherAdministration()
 {
     require('view/backend/administration.php');
-}
+} 
