@@ -346,7 +346,9 @@ background-color: rgb(168, 168, 168);
 #buttonContact{
 	border-radius: 5px 5px;
 }
-
+#titleAdmin{
+	
+}
 /*-----------PIED DE PAGE----------*/
 footer{
 	width: auto;

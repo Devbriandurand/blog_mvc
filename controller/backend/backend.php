@@ -24,7 +24,7 @@ require_once('controller/frontend/frontend.php');
     $log = new Brian\Blog\Model\UserManager();
     $verify = $log->verify($username, $mdp); 
     if ($verify['admin'] == 1) {
-        header('Location: index.php?action=administration.php');
+        header('Location: index.php?action=administration');
     } 
     elseif (isset($verify['admin']))
     {
@@ -50,4 +50,9 @@ else
 throw new Exception('Erreur d\'insertion dans la base de données');
 }
 
+}
+
+function afficherAdministration()
+{
+    require('view/backend/administration.php');
 }
