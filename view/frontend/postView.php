@@ -47,7 +47,7 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td align='center'>
                 <input type="submit" value="Envoyer">
             </td>
         </tr>

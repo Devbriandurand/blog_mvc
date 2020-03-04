@@ -13,15 +13,7 @@
 
 			<h1 id="titleContact">CONTACTER MOI</h1>
 
-				<form action="contactView.php" method="_POST"  class="formContact">
-					<fieldset id="fieldsetContact">
-						<legend id="legendContact" align="center"><strong>Contact Info<strong></legend>
-							<p id="infos">
-								<strong>Jean Forteroche Écrivain</strong>
-							<br>25 Rue d'Iréki 75010 Paris
-						<br>
-							<span id="tel">Tel :</span>
-	 						01 02 03 04 05</p>
+				<form action="" method="_POST"  class="formContact">
 	 					<table class="tableContact">
 	 						<tr>
 	 							<td>
@@ -60,16 +52,16 @@
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<textarea id="inputTextarea" placeholder="Saisissez votre message" rows="10" cols="50"required></textarea>
+	 								<textarea id="inputTextarea" placeholder="Saisissez votre message" rows="10" cols="50"required>
+									 </textarea>
 	 							</td>
 	 						</tr>
 	 						<tr>
-	 							<td>
+	 							<td align='center'>
 	 								<input id="buttonContact" type="submit" name="buttonContact" value="Envoyer">
 	 							</td>
 	 						</tr>
 	 					</table>
-					</fieldset>
 				</form>
 		</section>
 

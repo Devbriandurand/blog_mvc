@@ -8,7 +8,7 @@ require_once('controller/frontend/frontend.php');
 
  function newAdmin($username, $mdp)
 {
-    $log = new \OpenClassrooms\Blog\Model\UserManager();
+    $log = new Brian\Blog\Model\UserManager();
     $verify = $log->verify($login, $mdp); 
     if (isset($verify['username'])) {
         header('Location: index.php?action=administration');
@@ -21,7 +21,7 @@ require_once('controller/frontend/frontend.php');
 
  function login($username, $mdp)
 {
-    $log = new \OpenClassrooms\Blog\Model\UserManager();
+    $log = new Brian\Blog\Model\UserManager();
     $verify = $log->verify($username, $mdp); 
     if ($verify['admin'] == 1) {
         header('Location: index.php?action=administration.php');
@@ -38,13 +38,12 @@ require_once('controller/frontend/frontend.php');
 
    function Member($pseudo, $password)
 {
-    $mbr = new \OpenClassrooms\Blog\Model\UserManager();
+    $mbr = new Brian\Blog\Model\UserManager();
     $affectedLines = $mbr->addmember($pseudo, $password);
     
      if($affectedLines)
      {
         header('Location: index.php');
-         echo "Bonjour ". $_POST['pseudo'];
 }
 else
 {

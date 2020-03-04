@@ -29,10 +29,6 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
-        elseif ($_GET['action'] == 'editComment')
-        {
-
-        }
 
         elseif($_GET['action'] == 'inscription')
         {
@@ -42,7 +38,13 @@ try {
                 {
                     if(!empty($_POST['pseudo']) OR !empty($_POST['password']) OR !empty($_POST['password2']))
                     {
-                        Member($_POST['pseudo'],$_POST['password']);
+                      if($_POST['password'] == $_POST['password2']) 
+                      {
+                        Member($_POST['pseudo'], crypt($_POST['password']));
+                      }
+                        else {
+                        throw new Exception('Les mots de passe ne sont pas identique !');
+                }  
                     }   
                 }   else {
                         throw new Exception('Veuillez saisir tous les champs !');

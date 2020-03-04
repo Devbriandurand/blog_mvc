@@ -1,5 +1,5 @@
 <?php
-namespace OpenClassrooms\Blog\Model;
+namespace Brian\Blog\Model;
 require_once("model/Manager.php");
 
 class UserManager extends Manager
