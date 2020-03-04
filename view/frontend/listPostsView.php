@@ -25,7 +25,7 @@ while ($data = $posts->fetch())
         <p>
             <?= nl2br(htmlspecialchars($data['content'])) ?>
             <br /><br /> <br /><br />
-            <em><a id="linkSuitPost" href="index.php?action=post&amp;id=<?= $data['id'] ?>">lire la suite</a></em>
+            <em><a id="linkSuitPost" href="index.php?action=post&amp;id=<?= $data['id'] ?>"><strong>lire la suite</strong></a></em>
         </p>
     </div>
 <?php
