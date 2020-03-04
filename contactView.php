@@ -8,12 +8,11 @@
 </head>
 <body>
 	<?php ob_start(); ?>
-
+<h1 id="titleContact">CONTACTER MOI</h1>
 		<section class="containerContact">
-
-			<h1 id="titleContact">CONTACTER MOI</h1>
-
-				<form action="" method="_POST"  class="formContact">
+			<form action="" method="_POST"  class="formContact">
+				<fieldset class='fieldsetContact'>
+					<legend align='center'><strong>Formulaire de contact</strong></legend>
 	 					<table class="tableContact">
 	 						<tr>
 	 							<td>
@@ -61,8 +60,9 @@
 	 								<input id="buttonContact" type="submit" name="buttonContact" value="Envoyer">
 	 							</td>
 	 						</tr>
-	 					</table>
-				</form>
+						 </table>
+				</fieldset>
+			</form>
 		</section>
 
 <?php $content = ob_get_clean(); ?>
