@@ -1,6 +1,7 @@
 <?php ob_start(); ?>
 
     <h1 id="titleAdministration">PAGE ADMINISTRATION</h1>
+    <!-- ADMINISTRATION CHAPITRES -->
         <h2 id="titleAdminChaptH2">Chapitres</h2>
     <div class="containerChapAdmin">
     <table id="adminTabHeader">
@@ -38,6 +39,7 @@
     </table>
     </div>
 
+    <!-- ADMINISTRATION COMMENTAIRES -->
 <h2 id="titleAdminComH2">Commentaires</h2>
 
 <div class="containerComAdmin">
@@ -79,7 +81,44 @@
     </table>
     </div>
 
+<!-- ADMINISTRATION UTILISATEURS -->
+    <h2 id="titleAdminComH22">Commentaires signaler</h2>
 
+<div class="containerComAdmin">
+    <table id="adminTabHeader">
+        <tr>
+            <th id="adminTh">
+                ID
+            </th>
+            <th id="adminTh">
+                AUTEUR
+            </th>
+            <th id="adminTh">
+                COMMENTAIRE
+            </th>
+            <th id="adminTh">
+                DATE
+            </th>
+            <th id="adminTh">
+                MODIFS
+            </th>
+
+        <?php foreach ($commentsAlert as $commentAlert) : ?>
+            <tr>
+                <td id="tdAdmin"><?= $commentAlert['id'] ?></td>
+                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
+                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
+                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
+                <td id="tdAdmin">
+                    <a href="index.php?action=editComment">Modifier</a>
+                    <hr>
+                    <a href="index.php?action=deleteComment">Supprimer</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    </div>
+<!-- ADMINISTRATION UTILISATEURS -->
     <h2 id="titleAdminComH2">Utilisateurs</h2>
 
 <div class="containerUserAdmin">
@@ -117,5 +156,5 @@
     </table>
     </div>
 
-<?php $content = ob_get_clean(); ?>
-<?php require('view/frontend/template.php'); ?>
+<?php $contentAdministration = ob_get_clean(); ?>
+<?php require('view/backend/template.php'); ?>

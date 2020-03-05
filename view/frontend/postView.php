@@ -43,7 +43,7 @@
         </tr>
         <tr>
             <td>
-                <textarea id="comment" name="comment" placeholder="Vous n'allez tout de même pas partir sans me laisser une petit commentaire ?! ^_^" rows="12" cols="60"></textarea>
+                <textarea id="comment" name="comment" placeholder="Vous n'alliez tout de même pas partir sans me laisser un commentaire ?! ^_^" rows="12" cols="60"></textarea>
             </td>
         </tr>
         <tr>
@@ -61,8 +61,8 @@
 while ($comment = $comments->fetch())
 {
 ?>
-    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] .' <span><input type=button value="supprimer" </span>'  ?></p>
-    <p><?= nl2br(htmlspecialchars($comment['comment'])) .'<hr>' ?></p>
+    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr']   ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) . '<br/>' .' <span><input type=button value="supprimer" </span>' .'<hr>'  ?></p>
 <?php
 }
 ?>

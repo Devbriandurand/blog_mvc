@@ -1,22 +1,30 @@
-html{
-	width:100%;
+html {
+	width: 100%;
 	height: auto;
 }
-body{
+
+body {
 	width: 100%;
 	height: auto;
 	margin: 0;
 	padding: 0;
 }
-.bodyTemplate{
+
+.bodyTemplate {
 	background-color: grey;
 }
-#contentTemplate{
+
+#contentTemplate {
 	margin-top: 8%;
 }
+
+
 /*------------ PAGE ACCUEIL ------------*/
+
+
 /*---- BARRE DE NAVIGATION ----*/
-nav{
+
+nav {
 	width: 99.8%;
 	height: auto;
 	background-color: #338A9E;
@@ -30,19 +38,23 @@ nav{
 	align-content: center;
 	align-items: center;
 }
-#title1{
+
+#title1 {
 	color: black;
 	text-decoration: none;
 }
-#link1{
+
+#link1 {
 	color: black;
 	text-decoration: none;
 }
-#spanMenuNav{
+
+#spanMenuNav {
 	width: 30%;
 	height: auto;
 }
-ul{
+
+ul {
 	transition: all 2s ease;
 	width: 100%;
 	height: auto;
@@ -52,11 +64,11 @@ ul{
 	margin-left: 30%;
 }
 
-nav #spanMenuNav ul li{
+nav #spanMenuNav ul li {
 	transition: all 2s linear;
-	border: 2px solid rgba(0,0,0,.7);
+	border: 2px solid rgba(0, 0, 0, .7);
 	font-size: 1.4em !important;
-	list-style:none;
+	list-style: none;
 	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -66,23 +78,25 @@ nav #spanMenuNav ul li{
 	padding: 2%;
 	margin-right: 2%;
 }
-nav #spanMenuNav ul li:hover{
+
+nav #spanMenuNav ul li:hover {
 	background-color: #154F7F;
 }
 
+
 /*PAGE INSCRIPTION*/
 
-#titleInscription{
+#titleInscription {
 	font-size: 2.4em;
 	text-align: center;
 	margin-left: 2%;
 	text-shadow: 1px 1px 2px black;
 }
 
-.formulaireInscription{
-	width:30%;
+.formulaireInscription {
+	width: 30%;
 	height: 100%;
-	border:1px dashed black;
+	border: 1px dashed black;
 	border-radius: 5px 5px;
 	background-color: #88ABC5;
 	margin-top: 6%;
@@ -96,7 +110,8 @@ nav #spanMenuNav ul li:hover{
 	align-items: center;
 	padding: 1.5%;
 }
-.fieldsetRegister{
+
+.fieldsetRegister {
 	width: auto;
 	height: auto;
 	border: 2px solid red;
@@ -104,115 +119,129 @@ nav #spanMenuNav ul li:hover{
 	padding: 1%;
 	margin-bottom: 2%;
 }
-#legendInscription{
+
+#legendInscription {
 	font-size: 1.3em;
 	font-weight: 600;
 }
 
-#inputRegister{
+#inputRegister {
 	width: 98%;
 	height: auto;
 	transition: all 1s linear !important;
 	border-radius: 5px 5px;
 }
-#inputRegister:focus{
+
+#inputRegister:focus {
 	background-color: #9DD17B;
 }
-#inputRegisterSend{
+
+#inputRegisterSend {
 	width: 30%;
 	height: auto;
 	margin-left: 35%;
 	margin-top: 2%;
 	border-radius: 5px 5px;
 	font-family: roboto;
-	font-weight: 500 ;
+	font-weight: 500;
 }
-.containerLinkConnexion{
+
+.containerLinkConnexion {
 	margin-top: 2%;
 }
 
+
 /*PAGE DE LOGIN/CONNEXION*/
-#titleLogin{
-font-size: 2.4em;
-text-shadow: 1px 1px 2px black;
-margin-top: 8%;
-text-align: center;
-}
-.formLogin{
-display:flex;
-flex-direction: center;
-justify-content: center;
-   margin-bottom: 2%;
+
+#titleLogin {
+	font-size: 2.4em;
+	text-shadow: 1px 1px 2px black;
+	margin-top: 8%;
+	text-align: center;
 }
 
-.fieldsetLogin{
+.formLogin {
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	margin-bottom: 2%;
+}
+
+.fieldsetLogin {
 	width: auto;
 	height: auto;
 	border: 1px solid red;
 }
-#legendLogin{
+
+#legendLogin {
 	font-size: 1.3em;
 }
-#imgLogin{
+
+#imgLogin {
 	width: 100%;
 	height: auto;
 }
-.containerLinkRegister{
+
+.containerLinkRegister {
 	margin-top: 2%;
-	text-align:center;
+	text-align: center;
 }
 
+
 /*PAGE DE BLOG*/
-#titleListPostsViewh1{
-	border: 1px solid blue;
+
+#titleListPostsh1 {
 	text-align: center !important;
 	margin-top: 8%;
 	font-size: 2.4em;
 	text-shadow: 1px 1px 2px black;
 }
-#titleListPostsViewh2{
-	text-align: center;
-	margin-top: 10%;
-	font-size: 2em;
-	text-shadow: 1px 1px 2px black;
-}
-#derniersBillets{
+
+#derniersBillets {
 	margin-left: 10%;
 }
-#titlePostView{
+
+#titlePostView {
 	font-size: 2.4em;
 	text-align: center;
 	margin-top: 8%;
 	text-shadow: 1px 1px 2px grey;
 }
-#retourBillet{
+
+#retourBillet {
 	padding-left: 10%;
 	font-weight: 600;
 	color: rgb(45, 76, 128);
 }
-#retourBillet:hover{
-color: rgb(0, 173, 12);
+
+#retourBillet:hover {
+	color: rgb(0, 173, 12);
 }
 
 
 /*MES CHAPITRES*/
+
+
 /*ARTICLE*/
-.news{
+
+.news {
 	width: 80%;
 	height: 100%;
-	margin:0 auto;
+	margin: 0 auto;
 	margin-bottom: 5%;
 	background-color: #88ABC5;
-	border:1px solid black;
+	border: 1px solid black;
 	border-radius: 5px 5px;
 	text-align: justify-all;
 	padding: 2%;
 }
-#titleBillet{
+
+#titleBillet {
 	text-align: center;
 	font-size: 1.6em;
 }
-#content{
+
+#content {
 	font-weight: 400;
 	color: rgb(0, 0, 0);
 	font-size: 1.5em;
@@ -220,25 +249,27 @@ color: rgb(0, 173, 12);
 
 
 /*PAGE COMMENTAIRES*/
-.containerFormComment{
+
+.containerFormComment {
 	width: 100%;
 	height: 100%;
 	display: inline-flex;
 	flex-direction: row;
-	justify-content:space-around;
+	justify-content: space-around;
 	margin-bottom: 1.5%;
 }
-#titleComment{
+
+#titleComment {
 	width: auto;
 	height: auto;
 	text-align: center;
 	font-size: 1.8em;
 	text-shadow: 1px 1px 1px grey;
-	border-bottom: 2mm ridge rgba(97, 102, 93,.8);
+	border-bottom: 2mm ridge rgba(97, 102, 93, .8);
 	padding-bottom: 2%;
 }
 
-#formulaireComment{
+#formulaireComment {
 	width: 40%;
 	height: 50%;
 	margin-top: 2%;
@@ -248,7 +279,8 @@ color: rgb(0, 173, 12);
 	border-radius: 5px 5px;
 	padding: 2%;
 }
-#fieldsetPost{
+
+#fieldsetPost {
 	border: 1px solid red;
 	border-radius: 5px 5px;
 	display: flex;
@@ -258,25 +290,28 @@ color: rgb(0, 173, 12);
 	align-items: center;
 	align-content: center;
 }
-#legendFormPost{
+
+#legendFormPost {
 	font-weight: 600;
 }
 
-#containerComment{
+#containerComment {
 	width: 30%;
 	height: 40%;
 	border-radius: 5px 5px;
 	background-color: #ffffff;
 	border: 1px solid black;
-	font-size:.9em;
+	font-size: .9em;
 	margin-top: 2%;
 	padding: 2%;
 }
-#hrPost{
-	border-bottom: 2mm ridge rgba(97, 102, 93,.8);
+
+#hrPost {
+	border-bottom: 2mm ridge rgba(97, 102, 93, .8);
 	margin-bottom: 3%;
 }
-#linkSuitPost{
+
+#linkSuitPost {
 	width: 100%;
 	height: auto;
 	color: black;
@@ -288,15 +323,18 @@ color: rgb(0, 173, 12);
 	text-decoration-line: none;
 	transition: all 2s linear;
 }
-#linkSuitPost:hover{
-	background-color:#154F7F;
+
+#linkSuitPost:hover {
+	background-color: #154F7F;
 }
+
+
 /*PAGE DE CONTACT*/
-.containerContact{
+
+.containerContact {
 	width: 100%;
 	height: 100%;
-	margin-top: 8%;
-	margin-bottom: 6%;
+	margin-bottom: 4%;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -304,26 +342,30 @@ color: rgb(0, 173, 12);
 	align-items: center;
 	align-content: center;
 }
-#titleContact{
+
+#titleContact {
 	font-size: 2.4em;
 	text-align: center;
 	margin-top: 2%;
-	text-shadow: 1px 1px 2px black; 
-} 
-.formContact{
-    width: auto;
+	text-shadow: 1px 1px 2px black;
+}
+
+.formContact {
+	width: auto;
 	height: 100%;
-	background-color:#88ABC5;
-    border-radius: 5px 5px;
-    display: inline-flex;
+	margin-top:0;
+	background-color: #88ABC5;
+	border-radius: 5px 5px;
+	display: inline-flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
 	padding: 1%;
-} 
-.fieldsetContact{
+}
+
+.fieldsetContact {
 	width: auto;
 	height: auto;
 	border: 2px solid red;
@@ -331,88 +373,125 @@ color: rgb(0, 173, 12);
 	border-radius: 5px 5px;
 	margin-bottom: 1%;
 }
-#legendContact{
+
+#legendContact {
 	font-size: 1.3em;
-}	
-
-#inputContact{
-transition: all 1s linear !important;
-width: 98%;
-height: auto;
-}
-#inputContact:focus{
-background-color: #9DD17B;
-}
-#inputTextarea{
-transition: all 1s linear !important;
-}
-#inputTextarea:focus{
-background-color: rgb(168, 168, 168);
 }
 
-#buttonContact{
+#inputContact {
+	transition: all 1s linear !important;
+	width: 98%;
+	height: auto;
+}
+
+#inputContact:focus {
+	background-color: #9DD17B;
+}
+
+#inputTextarea {
+	transition: all 1s linear !important;
+}
+
+#inputTextarea:focus {
+	background-color: rgb(168, 168, 168);
+}
+
+#buttonContact {
 	border-radius: 5px 5px;
 }
 
+
 /* PAGE ADMINISTRATION */
-#titleAdministration{
-text-align: center;
-font-size: 2.4em;
-margin-left: 2%;
-text-shadow: 1px 1px 2px black;
+
+#titleAdministration {
+	text-align: center;
+	font-size: 2.4em;
+	margin-left: 2%;
+	text-shadow: 1px 1px 2px black;
 }
 
-#titleAdminChaptH2{
-text-align: center;
-font-size: 2em;
-text-shadow: 1px 1px 2px black;
-color: red;
-}
-.containerChapAdmin{
-border: 1px solid black;
-margin-left: 1%;
-margin-right: 1%;
-}
-#adminTabHeader{
-border: 2px solid black;
-} 
-#adminTh{
-	border: 1px solid black;
-	background-color: rgb(0, 0, 0);
-	color: rgb(168, 168, 168);
-}
-.containerResponseChap{
-	border: 1px solid black;
-}
-#tdAdmin{
-	border: 1px solid black;
+
+/* BLOC CHAPITRES */
+
+#titleAdminChaptH2 {
 	text-align: center;
+	font-size: 2em;
+	text-shadow: 1px 1px 2px black;
+	color: #338A9E;
 }
-#ChapterModif{
-	vertical-align: center;
-}
-.containerUserAdmin{
+
+.containerChapAdmin {
+	border: 1px solid black;
 	margin-left: 1%;
 	margin-right: 1%;
 }
 
-/* BLOC COMMENTAIRE (page administration) */
-#titleAdminComH2{
-text-align: center;
-font-size: 2em;
-text-shadow: 1px 1px 2px black;
-color: red;
-}
-.containerComAdmin{
-border: 1px solid black;
-margin-left: 1%;
-margin-right: 1%;
+#adminTabHeader {
+	width: 100%;
+	height: auto;
+	border: 2px solid black;
 }
 
+#adminTh {
+	border: 1px solid black;
+	background-color: rgb(0, 0, 0);
+	color: rgb(168, 168, 168);
+}
+
+.containerResponseChap {
+	border: 1px solid black;
+}
+
+#tdAdmin {
+	border: 1px solid black;
+	text-align: center;
+}
+
+#ChapterModif {
+	vertical-align: center;
+}
+
+
+/* BLOC COMMENTAIRE */
+
+#titleAdminComH2 {
+	text-align: center;
+	font-size: 2em;
+	text-shadow: 1px 1px 2px black;
+	color: #338A9E;
+}
+
+.containerComAdmin {
+	border: 1px solid black;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+/* BLOC USER */
+
+.containerUserAdmin {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+/* BLOC COMMENTAIRE SIGNALER */
+
+#titleAdminComH22 {
+	text-align: center;
+	font-size: 2em;
+	text-shadow: 1px 1px 2px black;
+	color: red;
+}
 
 
 /*-----------PIED DE PAGE----------*/
-footer{
+
+footer {
 	width: auto;
 	height: auto;
 	border: 2px solid black;
@@ -422,4 +501,3 @@ footer{
 	background-color: #338A9E;
 	text-align: center;
 }
-

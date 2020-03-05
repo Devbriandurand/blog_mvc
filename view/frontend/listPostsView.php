@@ -8,8 +8,9 @@
 <body>
 
 <?php ob_start(); ?>
-<h1 id="titleListPostsViewh1<">Billet simple pour l'Alaska</h1>
-<h2 id="titleListPostsViewh2">MES BILLETS !</h2>
+
+<h1 id="titleListPostsh1">Billet simple pour l'Alaska</h1>
+
 <p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
 
 <?php
