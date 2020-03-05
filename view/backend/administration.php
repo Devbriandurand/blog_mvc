@@ -103,7 +103,7 @@
                 MODIFS
             </th>
 
-        <?php foreach ($commentsAlert as $commentAlert) : ?>
+        <!-- <?php foreach ($commentsAlert as $commentAlert) : ?>
             <tr>
                 <td id="tdAdmin"><?= $commentAlert['id'] ?></td>
                 <td id="tdAdmin"><?= $commentAlert[''] ?></td>
@@ -115,7 +115,7 @@
                     <a href="index.php?action=deleteComment">Supprimer</a>
                 </td>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach; ?> -->
     </table>
     </div>
 <!-- ADMINISTRATION UTILISATEURS -->

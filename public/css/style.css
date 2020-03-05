@@ -52,16 +52,16 @@ nav {
 #spanMenuNav {
 	width: 30%;
 	height: auto;
+	margin-right: 6%;
 }
 
 ul {
 	transition: all 2s ease;
 	width: 100%;
 	height: auto;
-	display: inline-block;
+	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-left: 30%;
 }
 
 nav #spanMenuNav ul li {
@@ -78,11 +78,17 @@ nav #spanMenuNav ul li {
 	padding: 2%;
 	margin-right: 2%;
 }
-
 nav #spanMenuNav ul li:hover {
 	background-color: #154F7F;
 }
 
+#link3 #link1{
+	transition: all 1.5s linear;
+	border-radius: 5%;
+}
+#link3 #link1:hover {
+	background-color: red;
+}
 
 /*PAGE INSCRIPTION*/
 
@@ -171,6 +177,7 @@ nav #spanMenuNav ul li:hover {
 	width: auto;
 	height: auto;
 	border: 1px solid red;
+	box-shadow: 2px 2px 4px black;
 }
 
 #legendLogin {
