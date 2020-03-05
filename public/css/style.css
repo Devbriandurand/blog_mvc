@@ -53,7 +53,7 @@ ul{
 }
 
 nav #spanMenuNav ul li{
-	
+	transition: all 2s linear;
 	border: 2px solid rgba(0,0,0,.7);
 	font-size: 1.4em !important;
 	list-style:none;
@@ -76,7 +76,7 @@ nav #spanMenuNav ul li:hover{
 	font-size: 2.4em;
 	text-align: center;
 	margin-left: 2%;
-	text-shadow: 1px 1px 2px grey;
+	text-shadow: 1px 1px 2px black;
 }
 
 .formulaireInscription{
@@ -134,7 +134,7 @@ nav #spanMenuNav ul li:hover{
 /*PAGE DE LOGIN/CONNEXION*/
 #titleLogin{
 font-size: 2.4em;
-text-shadow: 1px 1px 2px grey;
+text-shadow: 1px 1px 2px black;
 margin-top: 8%;
 text-align: center;
 }
@@ -163,11 +163,18 @@ justify-content: center;
 }
 
 /*PAGE DE BLOG*/
-#titleListPostsView{
-	text-align: center;
+#titleListPostsViewh1{
+	border: 1px solid blue;
+	text-align: center !important;
 	margin-top: 8%;
 	font-size: 2.4em;
-	text-shadow: 1px 1px 2px grey;
+	text-shadow: 1px 1px 2px black;
+}
+#titleListPostsViewh2{
+	text-align: center;
+	margin-top: 10%;
+	font-size: 2em;
+	text-shadow: 1px 1px 2px black;
 }
 #derniersBillets{
 	margin-left: 10%;
@@ -301,7 +308,7 @@ color: rgb(0, 173, 12);
 	font-size: 2.4em;
 	text-align: center;
 	margin-top: 2%;
-	text-shadow: 1px 1px 2px grey;  
+	text-shadow: 1px 1px 2px black; 
 } 
 .formContact{
     width: auto;
@@ -346,8 +353,53 @@ background-color: rgb(168, 168, 168);
 #buttonContact{
 	border-radius: 5px 5px;
 }
-#titleAdmin{
-	
+
+/* PAGE ADMINISTRATION */
+#titleAdministration{
+text-align: center;
+font-size: 2.4em;
+margin-left: 2%;
+text-shadow: 1px 1px 2px black;
+}
+
+#titleAdminChaptH2{
+text-align: center;
+font-size: 2em;
+text-shadow: 1px 1px 2px black;
+color: red;
+}
+.containerChapAdmin{
+border: 1px solid black;
+margin-left: 1%;
+margin-right: 1%;
+}
+#adminTabHeader{
+border: 2px solid black;
+} 
+#adminTh{
+	border: 1px solid black;
+}
+.containerResponseChap{
+	border: 1px solid black;
+}
+#ChapterId,#ChapterTitle,#ChapterContent,#ChapterDate, #ChapterModif{
+	border: 1px solid black;
+	text-align: center;
+}
+#ChapterModif{
+	vertical-align: center;
+}
+/* BLOC COMMENTAIRE (page administration) */
+#titleAdminComH2{
+text-align: center;
+font-size: 2em;
+text-shadow: 1px 1px 2px black;
+color: red;
+}
+.containerComAdmin{
+border: 1px solid black;
+margin-left: 1%;
+margin-right: 1%;
 }
 /*-----------PIED DE PAGE----------*/
 footer{

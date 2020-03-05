@@ -56,5 +56,11 @@ throw new Exception('Erreur d\'insertion dans la base de données');
 
 function afficherAdministration()
 {
+    $chpt = new Brian\Blog\Model\PostManager();
+    $chapters = $chpt->getPosts();
+
+    $cmt = new Brian\Blog\Model\CommentManager();
+    $comments = $cmt->getComments();
+    
     require('view/backend/administration.php');
 } 

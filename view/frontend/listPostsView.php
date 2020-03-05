@@ -6,10 +6,10 @@
     <title>Le blog de Jean Forteroche</title>
 </head>
 <body>
-<?php $title = 'Jean Forteroche'; ?>
 
 <?php ob_start(); ?>
-<h1 id="titleListPostsView">MES BILLETS !</h1>
+<h1 id="titleListPostsViewh1<">Billet simple pour l'Alaska</h1>
+<h2 id="titleListPostsViewh2">MES BILLETS !</h2>
 <p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
 
 <?php
