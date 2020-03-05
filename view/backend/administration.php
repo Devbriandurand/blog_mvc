@@ -13,7 +13,7 @@
             </th>
 
             <th id="adminTh">
-                CONTENU
+                EXTRAITS BILLETS 
             </th>
             <th id="adminTh">
                 DATE
@@ -24,11 +24,11 @@
         </tr>
         <?php foreach ($chapters as $chapter) : ?>
             <tr>
-                <td id="ChapterId"><?= $chapter['id'] ?></td>
-                <td id="ChapterTitle"><?= $chapter['title'] ?></td>
-                <td id="ChapterContent"><?= $chapter['content'] ?></td>
-                <td id="ChapterDate"><?= $chapter['creation_date_fr'] ?></td>
-                <td id="ChapterModif">
+                <td id="tdAdmin"><?= $chapter['id'] ?></td>
+                <td id="tdAdmin"><?= $chapter['title'] ?></td>
+                <td id="tdAdmin"><?= $chapter['content'] ?></td>
+                <td id="tdAdmin"><?= $chapter['creation_date_fr'] ?></td>
+                <td id="tdAdmin">
                     <a href="index.php?action=editChapter">Modifier</a>
                     <hr>
                     <a href="index.php?action=deleteChapter">Supprimer</a>
@@ -64,15 +64,53 @@
 
         <?php foreach ($comments as $comment) : ?>
             <tr>
-                <td id="ComId"><?= $comment['id'] ?></td>
-                <td id="ComTitle"><?= $comment['post_id'] ?></td>
-                <td id="ComContent"><?= $comment['author'] ?></td>
-                <td id="ComDate"><?= $comment['comment'] ?></td>
-                <td id="ComDate"><?= $comment['comment_date_fr'] ?></td>
-                <td id="ComModif">
+                <td id="tdAdmin"><?= $comment['id'] ?></td>
+                <td id="tdAdmin"><?= $comment['post_id'] ?></td>
+                <td id="tdAdmin"><?= $comment['author'] ?></td>
+                <td id="tdAdmin"><?= $comment['comment'] ?></td>
+                <td id="tdAdmin"><?= $comment['comment_date'] ?></td>
+                <td id="tdAdmin">
                     <a href="index.php?action=editComment">Modifier</a>
                     <hr>
                     <a href="index.php?action=deleteComment">Supprimer</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+    </div>
+
+
+    <h2 id="titleAdminComH2">Utilisateurs</h2>
+
+<div class="containerUserAdmin">
+    <table id="adminTabHeader">
+        <tr>
+            <th id="adminTh">
+                ID
+            </th>
+            <th id="adminTh">
+                PSEUDO
+            </th>
+            <th id="adminTh">
+                MOT DE PASSE
+            </th>
+            <th id="adminTh">
+                ADMIN = 1 / USER = 0
+            </th>
+            <th id="adminTh">
+                MODIFS
+            </th>
+
+        <?php foreach ($users as $user) : ?>
+            <tr>
+                <td id="tdAdmin"><?= $user['id'] ?></td>
+                <td id="tdAdmin"><?= $user['pseudo'] ?></td>
+                <td id="tdAdmin"><?= $user['password'] ?></td>
+                <td id="tdAdmin"><?= $user['admin'] ?></td>
+                <td id="tdAdmin">
+                    <a href="index.php?action=editUser">Modifier</a>
+                    <hr>
+                    <a href="index.php?action=deleteUser">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

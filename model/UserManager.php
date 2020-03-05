@@ -12,6 +12,14 @@ class UserManager extends Manager
         return $req->fetch();
     }
 
+    public function getUsers()
+    {
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT * FROM users ');
+
+        return $req;
+    }
+
 		public function addmember($pseudo, $password)
     {
         $db = $this->dbConnect();
