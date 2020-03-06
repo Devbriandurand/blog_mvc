@@ -18,10 +18,10 @@
         <fieldset class="fieldsetLogin">
             <legend id="legendLogin" align='center'><strong>Connexion</strong></legend>
             <label for="username"><strong>Login</strong></label>
-            <input type="text" name="username">
+            <input id="inputLogin" type="text" name="username">
             <label><strong>Mot de passe</strong></label>
-            <input type="password" name="mdp">
-            <input type="submit" name="submitConnexion">
+            <input id="inputLogin" type="password" name="mdp">
+            <input id="inputLoginSubmit" type="submit" name="submitConnexion">
             <div class=containerLinkRegister>
                         <a href="index.php?action=inscription">
                             <strong>Vous n'êtes pas encore membre ?</strong>
