@@ -11,7 +11,7 @@
 
 					<?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1 ) : ?>
 						<li><a id="link1" href="index.php?action=administration">Administration</a></li>
-						<li id="link3"><a id="link1" href="index.php?action=connexion">Déconnexion</a></li>
+						<li id="link3"><a id="link1" href="index.php?action=connexion"><strong>Déconnexion</strong></a></li>
 					<?php endif; ?>
 					
 					<li><a id="link1" href="contactView.php">Contact</a></li>
