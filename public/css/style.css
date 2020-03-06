@@ -508,6 +508,43 @@ nav #spanMenuNav ul li:hover {
 }
 
 
+/* PAGE DE PROFIL UTILISATEUR */
+
+#titleProfil{
+	text-align: center;
+	font-size: 2.4em;
+	margin-left: 2%;
+	text-shadow: 1px 1px 2px black;
+}
+
+.containerAvatar{
+	width: 20%;
+	height: auto;
+	margin-right: 5%;
+	margin-bottom: 5%;
+	float: right;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;	
+	box-shadow: 2px 2px 4px 2px;
+	border: 1px dashed black;
+}
+#titleAvatar{
+	text-align: center;
+}
+#imgChoise{
+	width: 60%;
+	height: auto;
+	border-radius: 5%;
+	margin-left: 20%;
+	margin-bottom: 2%;
+}
+.containerComPost{
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
 /*-----------PIED DE PAGE----------*/
 
 footer {
