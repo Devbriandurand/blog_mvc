@@ -168,7 +168,7 @@ nav #spanMenuNav ul li:hover {
 
 .formLogin {
 	display: flex;
-	flex-direction: center;
+	flex-direction: row;
 	justify-content: center;
 	margin-bottom: 2%;
 }
@@ -176,6 +176,7 @@ nav #spanMenuNav ul li:hover {
 .fieldsetLogin {
 	width: auto;
 	height: auto;
+	padding-top: 1.5%;
 	border: 1px solid red;
 	box-shadow: 2px 2px 4px black;
 }
@@ -188,7 +189,17 @@ nav #spanMenuNav ul li:hover {
 	width: 100%;
 	height: auto;
 }
-
+#inputLogin{
+	transition: all 1s linear !important;
+	border-radius: 5px 5px;
+}
+#inputLogin:focus{
+	background-color: #9DD17B;
+}
+#inputLoginSubmit{
+	border-radius: 5%;
+	box-shadow: 1px 1px 3px 1px;
+}
 .containerLinkRegister {
 	margin-top: 2%;
 	text-align: center;
@@ -483,6 +494,7 @@ nav #spanMenuNav ul li:hover {
 	justify-content: center;
 	margin-left: 1%;
 	margin-right: 1%;
+	margin-bottom: 5%;
 }
 
 
@@ -504,7 +516,11 @@ footer {
 	border: 2px solid black;
 	font-size: 1.2em;
 	font-weight: 600;
-	padding: 1%;
+	padding-left: 10%;
+	padding-right: 10%;
 	background-color: #338A9E;
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
 }
