@@ -31,7 +31,7 @@ function login($username, $mdp)
     }
     elseif (isset($verify['admin']))
     {
-        header('Location: index.php?action=profile');
+        header('Location: index.php?action=profil');
     }
     else
     {
@@ -67,4 +67,5 @@ function afficherAdministration()
     $users = $usr->getUsers();
     require ('view/backend/administration.php');
 }
+
 

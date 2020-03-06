@@ -11,12 +11,16 @@
 
 					<?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1 ) : ?>
 						<li><a id="link1" href="index.php?action=administration">Administration</a></li>
-						<li id="link3"><a id="link1" href="index.php?action=connexion"><strong>Déconnexion</strong></a></li>
+						<li id="link3"><a id="link1" href="index.php?action=deconnexion"><strong>Déconnexion</strong></a></li>
 					<?php endif; ?>
 					
+					<?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == 0 ) : ?>
+						<li><a id="link1" href="index.php?action=profil">Mon profil</a></li>
+						<li id="link3"><a id="link1" href="index.php?action=deconnexion"><strong>Déconnexion</strong></a></li>
+					<?php endif; ?>
+
 					<li><a id="link1" href="contactView.php">Contact</a></li>
 					
-
 		        </ul>
 		    </span>
 		</nav>

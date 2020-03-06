@@ -12,6 +12,6 @@
 		<?php require('menuNav.php'); ?>
 		<div id="contentTemplate"><?= $content ?></div>
 		<?php require('footer.php'); ?>
-
+		
 	</body>
 </html>

@@ -1,57 +1,24 @@
-<?php 
-$title = 'Jean Forteroche';
-?>
+<?php ob_start(); ?>
 
-<?php 
-if($_SESSION['id'] == 0) {
-?>
-    <div id="text_inscription">
-        <h2>Inscription</h2>
+<h1 id='titleProfil'>Mon profil</h1>
+    <div class="containerComPost">
+    <table id="adminTabHeader">
+        <tr>
+            <th id="adminTh">
+                Auteur
+            </th>
+            <th id="adminTh">
+                Commentaire
+            </th>
 
-        <p class="paragraphe" >Pour vous inscrire suivez le lien - <a href="<?= $_POST['URL_PATH'] ?>profil/inscription">Inscription</a></p>
-        
+            <th id="adminTh">
+                Date
+            </th>
+            <th id="adminTh">
+                Signalement
+            </th>
+    </table>
     </div>
 
-    <div id="text_connexion">
-        <h2>Connexion</h2>
-
-        <p class="paragraphe">Pour vous connecter - <a href="<?= $_POST['URL_PATH'] ?>profil/connexion">Connexion</a><br />
-        Vous avez oubliez votre mot de passe ? Merci de suivre ce lien - <a href="<?= $_POST['URL_PATH'] ?>profil/recuperation">Recupération du mot de passe</a>
-        </p>
-
-        
-    </div>   
-<?php
-}
-else {
-?>
-    <div id="profil">
-        <h2>Profil de <?php echo $_SESSION['pseudo']; ?></h2>
-        <br />
-        <p class="paragraphe">Pseudo = <?php echo $_SESSION['pseudo']; ?></p>  
-        <p class="paragraphe">Mail = <?php echo $_SESSION['mail']; ?></p>  
-        <?php
-        if(isset($_SESSION['id']) == $_SESSION['id']) {
-        ?>
-        <br />
-        <a href="<?= $_POST['URL_PATH'] ?>profil/editProfil">Editer mon profil - </a>
-        <a href="<?= $_POST['URL_PATH'] ?>profil/deconnexion">Se déconnecter</a>
-
-        <?php
-        }
-        ?>
-
-        <?php 
-            if($_SESSION['admin'] == true) {
-        ?>
-        <br />
-        <a href="<?= $_POST['URL_PATH'] ?>administration">Accéder à l'espace administration</a>
-        
-        <?php
-        }
-        ?>
-    </div>
-<?php
-}
-?>
-require('template.php');
+<?php $content = ob_get_clean(); ?>
+<?php require('template.php'); ?>

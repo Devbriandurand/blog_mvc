@@ -52,8 +52,7 @@
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<textarea id="inputTextarea" placeholder="Saisissez votre message" rows="10" cols="50"required>
-									 </textarea>
+	 								<textarea id="inputTextarea" placeholder="Veuillez saisir votre message..." rows="10" cols="50" required></textarea>
 	 							</td>
 	 						</tr>
 	 						<tr>

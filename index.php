@@ -81,10 +81,7 @@ try
                     if (!empty($_POST['username']) or !empty($_POST['mdp']))
                     {
                         login($_POST['username'], $_POST['mdp']);
-                        if (isset($_GET['username']))
-                        {
-                            echo 'Bonjour ' . $_POST['username'];
-                        }
+                        echo '<p>Bonjour </p>' . $_POST['username'];
                     }
                     else
                     {
@@ -103,7 +100,23 @@ try
                 afficherAdministration();
         }
 
+        elseif ($_GET['action'] == 'profil')
+        {
+                afficherProfil();
+        }
+
+        // DECONNEXION
+        elseif ($_GET['action'] == 'deconnexion')
+        {
+            if(isset($_SESSION['pseudo']))
+            {
+                session_destroy();
+                afficherLoginView();
+            }
+            
+        }
     }
+
     else
     {
         listPosts();

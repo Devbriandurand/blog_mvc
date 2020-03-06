@@ -51,3 +51,10 @@ function afficherLoginView(){
 function afficherRegisterView(){
     require('view/frontend/registerView.php');
 }
+
+function afficherProfil()
+{
+    $alertComment = new Brian\Blog\Model\CommentManager();
+    $comments = $alertComment->commentsGet();
+    require ('view/frontend/profil.php');
+}
