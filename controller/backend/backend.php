@@ -29,8 +29,10 @@ function login($username, $mdp)
         $_SESSION['pseudo'] = $verify['pseudo'];
         header('Location: index.php?action=administration');
     }
-    elseif (isset($verify['admin']))
+    elseif ($verify['admin'] == 0)
     {
+        $_SESSION['admin'] = 0;
+        $_SESSION['pseudo'] = $verify['pseudo'];
         header('Location: index.php?action=profil');
     }
     else

@@ -81,7 +81,6 @@ try
                     if (!empty($_POST['username']) or !empty($_POST['mdp']))
                     {
                         login($_POST['username'], $_POST['mdp']);
-                        echo '<p>Bonjour </p>' . $_POST['username'];
                     }
                     else
                     {
@@ -108,12 +107,8 @@ try
         // DECONNEXION
         elseif ($_GET['action'] == 'deconnexion')
         {
-            if(isset($_SESSION['pseudo']))
-            {
                 session_destroy();
-                afficherLoginView();
-            }
-            
+                header('Location: index.php?action=connexion');
         }
     }
 

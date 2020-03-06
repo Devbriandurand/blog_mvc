@@ -25,7 +25,7 @@ body {
 /*---- BARRE DE NAVIGATION ----*/
 
 nav {
-	width: 99.8%;
+	width: 100%;
 	height: auto;
 	background-color: #338A9E;
 	border-bottom: 5px solid black;
@@ -44,47 +44,41 @@ nav {
 	text-decoration: none;
 }
 
-#link1 {
-	color: black;
-	text-decoration: none;
-}
-
-#spanMenuNav {
-	width: 30%;
-	height: auto;
-	margin-right: 6%;
-}
-
 ul {
-	transition: all 2s ease;
 	width: 100%;
 	height: auto;
+	transition: all 2s ease;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
-nav #spanMenuNav ul li {
+#containerLiMenuNav{
+	width: 100%;
+	height: auto;
+	text-align: center;
 	transition: all 2s linear;
 	border: 2px solid rgba(0, 0, 0, .7);
 	font-size: 1.4em !important;
 	list-style: none;
-	display: inline-flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
 	padding: 2%;
 	margin-right: 2%;
 }
-nav #spanMenuNav ul li:hover {
+#containerLiMenuNav:hover{
 	background-color: #154F7F;
 }
-
+#link1 {
+	font-weight: 600;
+	color: black;
+	text-decoration: none;
+}
 #link3 #link1{
 	transition: all 1.5s linear;
 	border-radius: 5%;
+		padding-right: 2%;
+	padding-left: 2%;
 }
 #link3 #link1:hover {
 	background-color: red;
@@ -535,11 +529,11 @@ nav #spanMenuNav ul li:hover {
 	text-align: center;
 }
 #imgChoise{
-	width: 60%;
+	width: 50%;
 	height: auto;
 	border-radius: 5%;
-	margin-left: 20%;
-	margin-bottom: 2%;
+	margin-left: 25%;
+	margin-bottom: 10%;
 }
 .containerComPost{
 	margin-top: 5%;
@@ -556,8 +550,6 @@ footer {
 	padding-left: 10%;
 	padding-right: 10%;
 	background-color: #338A9E;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-
+	text-align: center;
+	margin-bottom: 0;
 }
