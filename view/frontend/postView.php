@@ -1,5 +1,3 @@
-<?php $title = htmlspecialchars($post['title']); ?>
-
 <?php ob_start(); ?>
 
 <h1 id="titlePostView">Mes chapitres !</h1>
@@ -62,7 +60,7 @@ while ($comment = $comments->fetch())
 {
 ?>
     <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr']   ?></p>
-    <p><?= nl2br(htmlspecialchars($comment['comment'])) . '<br/>' .' <span><input type=button value="supprimer" </span>' .'<hr>'  ?></p>
+    <p><?= nl2br(htmlspecialchars($comment['comment'])) . '<br/>' .' <span><input type=button value="signaler" </span>' .'<hr>'  ?></p>
 <?php
 }
 ?>

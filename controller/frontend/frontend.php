@@ -37,24 +37,34 @@ require_once('model/CommentManager.php');
 }
 
 //Signalement d'un commentaire
+function afficherMessageProfil()
+{
+    $message = new Brian\Blog\Model\UserManager();
+    $messages = $message->getOneUser();
+}
 function alertComment() 
 {
     $alertedComment = $this->CommentManager->reportComment($id);  
     $alert = $_POST['alert'];    
-    header('Location: '. $_POST['URL_PATH'] . 'chapitres'); 
-}
-
-function afficherLoginView(){
-    require('view/frontend/loginView.php');
+    header('Location: ' . 'chapitres'); 
 }
 
 function afficherRegisterView(){
     require('view/frontend/registerView.php');
 }
 
+function afficherLoginView(){
+    require('view/frontend/loginView.php');
+}
+
 function afficherProfil()
 {
-    $alertComment = new Brian\Blog\Model\CommentManager();
-    $comments = $alertComment->commentsGet();
-    require ('view/frontend/profil.php');
+    $chpt = new Brian\Blog\Model\PostManager();
+    $chapters = $chpt->getPosts();
+    require('view/frontend/profil.php');
+}
+
+function afficherContactView()
+{
+    require('view/frontend/contactView.php');
 }

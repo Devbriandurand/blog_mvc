@@ -43,17 +43,23 @@ try
             }
         }
 
+        elseif ($_GET['action'] == 'contact')
+        {       
+                afficherContactView(); 
+        }
+
         elseif ($_GET['action'] == 'inscription')
         {
             if (isset($_POST['submitInscription']))
             {
                 if (isset($_POST['pseudo']) && $_POST['password'])
                 {
-                    if (!empty($_POST['pseudo']) or !empty($_POST['password']) or !empty($_POST['password2']))
+                    if (!empty($_POST['pseudo']) && !empty($_POST['password']) && !empty($_POST['password2']))
                     {
                         if ($_POST['password'] == $_POST['password2'])
                         {
                             Member($_POST['pseudo'], crypt($_POST['password']));
+                            header('Location: index.php?action=connexion');
                         }
                         else
                         {
@@ -81,6 +87,7 @@ try
                     if (!empty($_POST['username']) or !empty($_POST['mdp']))
                     {
                         login($_POST['username'], $_POST['mdp']);
+                        $connexion = "connected";
                     }
                     else
                     {
@@ -109,7 +116,10 @@ try
         {
                 session_destroy();
                 header('Location: index.php?action=connexion');
+                $connexion = "disconnected";
         }
+
+        
     }
 
     else

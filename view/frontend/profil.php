@@ -42,24 +42,38 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0)  {
 		</form>
     </div>
 
-    <div class="containerComPost">
+    <div class="containerChapPost">
     <table id="adminTabHeader">
         <tr>
             <th id="adminTh">
-                Auteur
-            </th>
-            <th id="adminTh">
-                Commentaire
+                Chapitre
             </th>
 
+            <th id="adminTh">
+                Extrait
+            </th>
             <th id="adminTh">
                 Date
             </th>
             <th id="adminTh">
-                Signalement
+                Info
             </th>
+            
+        <?php foreach ($chapters as $chapter) : ?>
+            <tr>
+                <td id="tdAdmin"><?= $chapter['title'] ?></td>
+                <td id="tdAdmin"><?= $chapter['content'] ?></td>
+                <td id="tdAdmin"><?= $chapter['creation_date_fr'] ?></td>
+                <td id="tdAdmin">
+                    <a id="lireLaSuiteChap" href="index.php">Lire la suite</a>
+                    <hr>
+                    <a id="signalementChap" href="index.php?action=deleteChapter">Signaler</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
     </table>
     </div>
+
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

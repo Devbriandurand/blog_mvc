@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +11,7 @@
 	<?php ob_start(); ?>
 <h1 id="titleContact">CONTACTER MOI</h1>
 		<section class="containerContact">
-			<form action="" method="_POST"  class="formContact">
+			<form action="index.php?action=contact" method="POST"  class="formContact">
 				<fieldset class='fieldsetContact'>
 					<legend align='center'><strong>Formulaire de contact</strong></legend>
 	 					<table class="tableContact">

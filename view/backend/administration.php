@@ -30,9 +30,9 @@
                 <td id="tdAdmin"><?= $chapter['content'] ?></td>
                 <td id="tdAdmin"><?= $chapter['creation_date_fr'] ?></td>
                 <td id="tdAdmin">
-                    <a href="index.php?action=editChapter">Modifier</a>
+                    <a id="modifAdminEdit" href="index.php?action=editChapter">Modifier</a>
                     <hr>
-                    <a href="index.php?action=deleteChapter">Supprimer</a>
+                    <a id="modifAdminDelete" href="index.php?action=deleteChapter">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -72,9 +72,9 @@
                 <td id="tdAdmin"><?= $comment['comment'] ?></td>
                 <td id="tdAdmin"><?= $comment['comment_date'] ?></td>
                 <td id="tdAdmin">
-                    <a href="index.php?action=editComment">Modifier</a>
+                    <a id="modifAdminEdit" href="index.php?action=editComment">Modifier</a>
                     <hr>
-                    <a href="index.php?action=deleteComment">Supprimer</a>
+                    <a id="modifAdminDelete" href="index.php?action=deleteComment">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -147,9 +147,9 @@
                 <td id="tdAdmin"><?= $user['password'] ?></td>
                 <td id="tdAdmin"><?= $user['admin'] ?></td>
                 <td id="tdAdmin">
-                    <a href="index.php?action=editUser">Modifier</a>
+                    <a id="modifAdminEdit" href="index.php?action=editUser">Modifier</a>
                     <hr>
-                    <a href="index.php?action=deleteUser">Supprimer</a>
+                    <a id="modifAdminDelete" href="index.php?action=deleteUser">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>

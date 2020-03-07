@@ -67,7 +67,7 @@ function afficherAdministration()
 
     $usr = new Brian\Blog\Model\UserManager();
     $users = $usr->getUsers();
-    require ('view/backend/administration.php');
+    require('view/backend/administration.php');
 }
 
 

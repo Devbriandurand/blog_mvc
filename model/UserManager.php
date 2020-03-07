@@ -30,6 +30,15 @@ class UserManager extends Manager
 
         return $req;
     }
+
+    //Cette fonction nous permets de selectionné un utilisateur precis
+    public function getOneUser()
+    {
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT pseudo FROM users ');
+
+        return $req;
+    }
 }
 
 ?>

@@ -47,7 +47,6 @@ nav {
 ul {
 	width: 100%;
 	height: auto;
-	transition: all 2s ease;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -69,8 +68,27 @@ ul {
 #containerLiMenuNav:hover{
 	background-color: #154F7F;
 }
-#link1 {
+#containerLiMenuNavDeco{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	transition: all 2s linear;
+	border: 2px solid rgba(0, 0, 0, .7);
+	font-size: 1.4em !important;
+	list-style: none;
+	padding: 2%;
+	margin-right: 2%;
+}
+#containerLiMenuNavDeco:hover{
+	background-color: red;
+}
+#link1{
 	font-weight: 600;
+	color: black;
+	text-decoration: none;
+}
+
+#linkDeco{
 	color: black;
 	text-decoration: none;
 }
@@ -183,11 +201,11 @@ ul {
 	width: 100%;
 	height: auto;
 }
-#inputLogin{
+#inputLogin {
 	transition: all 1s linear !important;
 	border-radius: 5px 5px;
 }
-#inputLogin:focus{
+#inputLogin:focus {
 	background-color: #9DD17B;
 }
 #inputLoginSubmit{
@@ -421,8 +439,16 @@ ul {
 	margin-left: 2%;
 	text-shadow: 1px 1px 2px black;
 }
-
-
+#modifAdminEdit {
+	color: #154F7F;
+	font-weight: 600;
+	text-decoration: none;
+}
+#modifAdminDelete{
+	color: #ba0009;
+	font-weight:600;
+	text-decoration: none;
+}
 /* BLOC CHAPITRES */
 
 #titleAdminChaptH2 {
@@ -498,7 +524,7 @@ ul {
 	text-align: center;
 	font-size: 2em;
 	text-shadow: 1px 1px 2px black;
-	color: red;
+	color: #ba0009;
 }
 
 
@@ -539,8 +565,27 @@ ul {
 	margin-top: 5%;
 	margin-bottom: 5%;
 }
-/*-----------PIED DE PAGE----------*/
 
+/* PAGE PROFIL UTILISATEUR */
+.containerChapPost{
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 5%;
+}
+#lireLaSuiteChap{
+	font-size: 0.8em;
+	font-weight: 400;
+	text-decoration: none;
+}
+#signalementChap{
+	font-size: 0.8em;
+	color: red;
+	text-decoration: none;
+	font-weight: 600;
+	padding:3%;
+}
+
+/*-----------PIED DE PAGE----------*/
 footer {
 	width: auto;
 	height: auto;
@@ -551,5 +596,5 @@ footer {
 	padding-right: 10%;
 	background-color: #338A9E;
 	text-align: center;
-	margin-bottom: 0;
+	margin-top: auto;
 }
