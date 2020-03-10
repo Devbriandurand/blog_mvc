@@ -1,4 +1,5 @@
 <?php ob_start(); ?>
+<?php $title = 'titleAdministration' ?>
 
     <h1 id="titleAdministration">PAGE ADMINISTRATION</h1>
     <!-- ADMINISTRATION CHAPITRES -->
@@ -22,6 +23,12 @@
             <th id="adminTh">
                 MODIFS
             </th>
+            <th id="adminTh">
+                NEW CHAPITRE
+            </th>
+        </tr>
+        <tr>
+
         </tr>
         <?php foreach ($chapters as $chapter) : ?>
             <tr>
@@ -30,10 +37,11 @@
                 <td id="tdAdmin"><?= $chapter['content'] ?></td>
                 <td id="tdAdmin"><?= $chapter['creation_date_fr'] ?></td>
                 <td id="tdAdmin">
-                    <a id="modifAdminEdit" href="index.php?action=editChapter">Modifier</a>
+                    <a id="modifAdminEdit" href="index.php?action=afficherEditChapter&amp;id=<?= $chapter['id'] ?>">Editer</a>
                     <hr>
-                    <a id="modifAdminDelete" href="index.php?action=deleteChapter">Supprimer</a>
+                    <a id="modifAdminDelete" href="index.php?action=deleteChapter&amp;id=<?= $chapter['id'] ?>">Supprimer</a>
                 </td>
+                <td id="tdAdmin"><a href="index.php?action=afficherFormAddChap">Create new chapitre</a></td>
             </tr>
         <?php endforeach; ?>
     </table>
@@ -61,9 +69,12 @@
                 DATE
             </th>
             <th id="adminTh">
+                SIGNALEMENT
+            </th>
+             <th id="adminTh">
                 MODIFS
-            </tr>
-
+            </th>
+        </tr>
         <?php foreach ($comments as $comment) : ?>
             <tr>
                 <td id="tdAdmin"><?= $comment['id'] ?></td>
@@ -71,53 +82,20 @@
                 <td id="tdAdmin"><?= $comment['author'] ?></td>
                 <td id="tdAdmin"><?= $comment['comment'] ?></td>
                 <td id="tdAdmin"><?= $comment['comment_date'] ?></td>
+                <td id="tdAdmin"><?= $comment['signalement'] ?></td>
                 <td id="tdAdmin">
-                    <a id="modifAdminEdit" href="index.php?action=editComment">Modifier</a>
+                    <?php if ($comment['signalement'] == "oui"):?>
+                    <a id="modifAdminDesignaler" href="index.php?action=designalementComment&amp;id=<?= $comment['id'] ?>">Désignaler</a>
                     <hr>
-                    <a id="modifAdminDelete" href="index.php?action=deleteComment">Supprimer</a>
+                    <?php endif; ?>
+                    
+                    <a id="modifAdminDelete" href="index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
     </div>
 
-<!-- ADMINISTRATION UTILISATEURS -->
-    <h2 id="titleAdminComH22">Commentaires signaler</h2>
-
-<div class="containerComAdmin">
-    <table id="adminTabHeader">
-        <tr>
-            <th id="adminTh">
-                ID
-            </th>
-            <th id="adminTh">
-                AUTEUR
-            </th>
-            <th id="adminTh">
-                COMMENTAIRE
-            </th>
-            <th id="adminTh">
-                DATE
-            </th>
-            <th id="adminTh">
-                MODIFS
-            </th>
-
-        <!-- <?php foreach ($commentsAlert as $commentAlert) : ?>
-            <tr>
-                <td id="tdAdmin"><?= $commentAlert['id'] ?></td>
-                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
-                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
-                <td id="tdAdmin"><?= $commentAlert[''] ?></td>
-                <td id="tdAdmin">
-                    <a href="index.php?action=editComment">Modifier</a>
-                    <hr>
-                    <a href="index.php?action=deleteComment">Supprimer</a>
-                </td>
-            </tr>
-        <?php endforeach; ?> -->
-    </table>
-    </div>
 <!-- ADMINISTRATION UTILISATEURS -->
     <h2 id="titleAdminComH2">Utilisateurs</h2>
 
@@ -147,14 +125,12 @@
                 <td id="tdAdmin"><?= $user['password'] ?></td>
                 <td id="tdAdmin"><?= $user['admin'] ?></td>
                 <td id="tdAdmin">
-                    <a id="modifAdminEdit" href="index.php?action=editUser">Modifier</a>
-                    <hr>
-                    <a id="modifAdminDelete" href="index.php?action=deleteUser">Supprimer</a>
+                    <a id="modifAdminDelete" href="index.php?action=deleteUser&amp;id=<?= $user['id'] ?>">Supprimer</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
     </div>
 
-<?php $contentAdministration = ob_get_clean(); ?>
-<?php require('view/backend/template.php'); ?>
+<?php $content = ob_get_clean(); ?>
+<?php require('view/frontend/template.php'); ?>
