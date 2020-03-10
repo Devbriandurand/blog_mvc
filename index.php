@@ -1,11 +1,10 @@
-
 <?php
 session_start();
 require ('controller/frontend/frontend.php');
 require ('controller/backend/backend.php');
 
 try
-{
+{   
     if (isset($_GET['action']))
     {
         if ($_GET['action'] == 'listPosts')
@@ -24,6 +23,7 @@ try
             }
         }
 
+// VÉRIFICATION ADD COMMENT
         elseif ($_GET['action'] == 'addComment')
         {
             if (isset($_GET['id']) && $_GET['id'] > 0)
@@ -87,39 +87,103 @@ try
                     if (!empty($_POST['username']) or !empty($_POST['mdp']))
                     {
                         login($_POST['username'], $_POST['mdp']);
-                        $connexion = "connected";
+                         session_start();
                     }
                     else
                     {
                         throw new Exception('Veuillez saisir tous les champs !');
                     }
                 }
-
             }
             else
             {
                 afficherLoginView();
             }
         }
+
+//Afficher controller amdinistration
         elseif ($_GET['action'] == 'administration')
         {
+            if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
                 afficherAdministration();
+            } else{
+                throw new Exception('Vous n\'avez pas accès à cette page');
+            }
+                
         }
-
+//Afficher la page profil
         elseif ($_GET['action'] == 'profil')
         {
+            if(isset($_SESSION['admin']) && $_SESSION['admin'] == 0){
                 afficherProfil();
+            } else{
+                throw new Exception('Vous n\'avez pas accès à cette page');
+            }
         }
 
-        // DECONNEXION
+
+//Afficher la page edition chapitre
+        elseif($_GET['action'] == "afficherEditChapter")
+        {       
+                afficherPageEditChapter($_GET['id']);
+        } 
+//On ajoute le chapitre modifier
+        elseif($_GET['action'] == "editChapter")
+                {
+                    editChapter($_GET['id'], $_POST['title'], $_POST['content']);
+                }
+
+       
+
+
+
+
+
+
+
+
+//Afficher la page ajout d'un nouveau chapitre
+        elseif($_GET['action'] == "afficherFormAddChap")
+        {
+                afficherFormAddChap();
+        }
+//Ajoute un nouveau chapitre
+        elseif($_GET['action'] == "addChapitre"){
+                addChapitre($_POST);
+        }
+//Verification suppression chapitre
+        elseif($_GET['action'] == "deleteChapter")
+        {
+                deletChapter($_GET['id']); 
+        }
+//Verification suppression commentaire
+        elseif($_GET['action'] == "deleteComment")
+        {
+                deletComment($_GET['id']); 
+        }
+//Verification suppression user
+        elseif($_GET['action'] == "deleteUser")
+        {
+                deletComment($_GET['id']); 
+        }
+//Signaler commentaire
+        elseif($_GET['action'] == "signalerCom")
+        {
+                signalComment($_GET['id']); 
+        }
+//Désignaler commentaire
+        elseif($_GET['action'] == "designalementComment")
+        {
+                designalerComment($_GET['id']); 
+        }
+
+// DECONNEXION
         elseif ($_GET['action'] == 'deconnexion')
         {
                 session_destroy();
                 header('Location: index.php?action=connexion');
-                $connexion = "disconnected";
+                session_start();
         }
-
-        
     }
 
     else
