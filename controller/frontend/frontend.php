@@ -8,7 +8,6 @@ require_once('model/CommentManager.php');
 {
     $postManager = new Brian\Blog\Model\PostManager();
     $posts = $postManager->getPosts();
-
     require('view/frontend/listPostsView.php');
 }
 
@@ -16,55 +15,56 @@ require_once('model/CommentManager.php');
 {
     $postManager = new Brian\Blog\Model\PostManager();
     $commentManager = new Brian\Blog\Model\CommentManager();
-
     $post = $postManager->getPost($_GET['id']);
-    $comments = $commentManager->getComments($_GET['id']);
-
+    $comments = $commentManager->getComment($_GET['id']);
     require('view/frontend/postView.php');
 }
-//Ajout d'un commentaire
- function addComment($postId, $author, $comment)
-{
-    $commentManager = new Brian\Blog\Model\CommentManager();
-    $affectedLines = $commentManager->postComment($postId, $author, $comment);
 
-    if ($affectedLines === false) {
-        throw new Exception('Impossible d\'ajouter le commentaire !');
+//Ajout d'un commentaire
+    function addComment($postId, $author, $comment)
+    {
+        $commentManager = new Brian\Blog\Model\CommentManager();
+        $affectedLines = $commentManager->postComment($postId, $author, $comment);
+
+        if ($affectedLines === false) 
+        {
+            throw new Exception('Impossible d\'ajouter le commentaire !');
+        }
+        else {
+            header('Location: index.php?action=post&id=' . $postId);
+        }
     }
-    else {
-        header('Location: index.php?action=post&id=' . $postId);
-    }
-}
 
 //Signalement d'un commentaire
-function afficherMessageProfil()
-{
-    $message = new Brian\Blog\Model\UserManager();
-    $messages = $message->getOneUser();
-}
-function alertComment() 
-{
-    $alertedComment = $this->CommentManager->reportComment($id);  
-    $alert = $_POST['alert'];    
-    header('Location: ' . 'chapitres'); 
-}
+    function signalComment($commentId)
+    {
+        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager->signalManagerComment($commentId);
 
-function afficherRegisterView(){
-    require('view/frontend/registerView.php');
-}
+        header('Location: index.php');
+    }
 
-function afficherLoginView(){
-    require('view/frontend/loginView.php');
-}
 
-function afficherProfil()
-{
-    $chpt = new Brian\Blog\Model\PostManager();
-    $chapters = $chpt->getPosts();
-    require('view/frontend/profil.php');
-}
+//Déclaration page profil utilisateur
+    function afficherProfil()
+    {
+        $chpt = new Brian\Blog\Model\PostManager();
+        $chapters = $chpt->getPosts();
+        require('view/frontend/profil.php');
+    }
+//Déclaration page inscription
+    function afficherRegisterView(){
+        require('view/frontend/registerView.php');
+    }
+//Déclaration page connexion
+    function afficherLoginView(){
+        require('view/frontend/loginView.php');
+    }
+//Déclaration page contact
+    function afficherContactView()
+    {
+        require('view/frontend/contactView.php');
+    }
 
-function afficherContactView()
-{
-    require('view/frontend/contactView.php');
-}
+
+
