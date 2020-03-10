@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="FR">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <title>Le blog de Jean Forteroche</title>
-</head>
-<body>
-
 <?php ob_start(); ?>
 
 <h1 id="titleListPostsh1">Billet simple pour l'Alaska</h1>
@@ -24,7 +15,7 @@ while ($data = $posts->fetch())
         </h3>
         
         <p>
-            <?= nl2br(htmlspecialchars($data['content'])) ?>
+            <?= nl2br($data['content']) ?>
             <br /><br /> <br /><br />
             <em><a id="linkSuitPost" href="index.php?action=post&amp;id=<?= $data['id'] ?>"><strong>lire la suite</strong></a></em>
         </p>
@@ -36,6 +27,3 @@ $posts->closeCursor();
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
-
-</body>
-</html>
