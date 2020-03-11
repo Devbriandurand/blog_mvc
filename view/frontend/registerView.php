@@ -1,20 +1,12 @@
-    <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>page inscription</title>
-    </head>
+<?php ob_start(); ?>
 
-    <body>
-        <?php ob_start(); ?>
-        <h1 id="titleInscription">INSCRIPTION</h1>
-        <form class="formulaireInscription" action="index.php?action=inscription" method="POST" name="formInscription">
-            <fieldset>
-                <legend align="center"><strong>Formulaire d'inscription</strong></legend>
+    <h1 id="titleInscription">INSCRIPTION</h1>
+    <form class="formulaireInscription" action="index.php?action=inscription" method="POST" name="formInscription">
+        <fieldset>
+                <legend id="titleLegendInscription" align="center"><strong>Formulaire d'inscription</strong></legend>
             <table class="tableRegister">
                 <tr>
-                    <td align="left">
+                    <td>
                         <label for="pseudo"><strong>Pseudo</strong></label>
                     </td>
                 </tr>
@@ -25,7 +17,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="left">
+                    <td>
                         <label for="password"><strong>Mot de passe</strong></label>
                     </td>
                 </tr>
@@ -36,7 +28,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td align="left">
+                    <td>
                         <label for="password2"><strong>Confirmation du mot de passe</strong></label>
                     </td>
                 </tr>
@@ -51,18 +43,13 @@
                     </td>
                 </tr>
             </table>
-            </fieldset>
+    </fieldset>
             <div class=containerLinkConnexion>
                 <a href="index.php?action=connexion">
                     <strong>Vous êtes déjà membre ?</strong>
                 </a>
             </div>
-            
         </form>
 
         <?php $content = ob_get_clean(); ?>
         <?php require('view/frontend/template.php');  ?>
-
-    </body>
-
-    </html>
