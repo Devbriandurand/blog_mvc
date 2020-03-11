@@ -2,7 +2,6 @@ html {
 	width: 100%;
 	height: auto;
 }
-
 body {
 	width: 100%;
 	height: auto;
@@ -10,632 +9,1063 @@ body {
 	padding: 0;
 }
 
-.bodyTemplate {
-	background-color: grey;
-}
-
-#contentTemplate {
-	margin-top: 8%;
-}
-
-
-/*------------ PAGE ACCUEIL ------------*/
-
-
+/*------------ Template ------------*/
+	.bodyTemplate {
+		background-color: grey;
+	}
+	#contentTemplate {
+		margin-top: 8%;
+	}
+	.titleListPostsh1 {
+		margin-top: 10%;
+		text-align: center;
+		font-size: 2.4em;
+		text-shadow: 1px 1px 2px black;
+	}
+	#derniersBillets {
+		margin-left: 10%;
+	}
+	
 /*---- BARRE DE NAVIGATION ----*/
-
-nav {
-	width: 100%;
-	height: auto;
-	background-color: #338A9E;
-	border-bottom: 5px solid black;
-	position: fixed;
-	top: 0;
-	z-index: 1;
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
-}
-
-#title1 {
-	color: black;
-	text-decoration: none;
-}
-
-ul {
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
-
-#containerLiMenuNav{
-	width: 100%;
-	height: auto;
-	text-align: center;
-	transition: all 2s linear;
-	border: 2px solid rgba(0, 0, 0, .7);
-	font-size: 1.4em !important;
-	list-style: none;
-	padding: 2%;
-	margin-right: 2%;
-}
-#containerLiMenuNav:hover{
-	background-color: #154F7F;
-}
-#containerLiMenuNavDeco{
-	width: 100%;
-	height: auto;
-	text-align: center;
-	transition: all 2s linear;
-	border: 2px solid rgba(0, 0, 0, .7);
-	font-size: 1.4em !important;
-	list-style: none;
-	padding: 2%;
-	margin-right: 2%;
-}
-#containerLiMenuNavDeco:hover{
-	background-color: red;
-}
-#link1{
-	font-weight: 600;
-	color: black;
-	text-decoration: none;
-}
-
-#linkDeco{
-	color: black;
-	text-decoration: none;
-}
-#link3 #link1{
-	transition: all 1.5s linear;
-	border-radius: 5%;
+	nav {
+		width: 100%;
+		height: auto;
+		background-color: #338A9E;
+		border-bottom: 5px solid black;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: center;
+		align-items: center;
+	}
+	#title1 {
+		color: black;
+		text-decoration: none;
+		margin-right: 10%;
+	}
+	#titleMenuNav{
+		text-shadow: 1px 1px  2px;
+	}
+	.menuNavSpan{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+	}
+	ul {
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#containerLiMenuNav{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		transition: all 2s linear;
+		border: 2px solid rgba(0, 0, 0, .7);
+		font-size: 1.4em !important;
+		list-style: none;
+		padding: 2%;
+		margin-right: 2%;
+	}
+	#containerLiMenuNav:hover{
+		background-color: #154F7F;
+	}
+	#containerLiMenuNavDeco{
+		width: 100%;
+		height: auto;
+		text-align: center;
+		transition: all 2s linear;
+		border: 2px solid rgba(0, 0, 0, .7);
+		font-size: 1.4em !important;
+		list-style: none;
+		padding: 2%;
+		margin-right: 2%;
+	}
+	#containerLiMenuNavDeco:hover{
+		background-color: red;
+	}
+	#link1{
+		font-weight: 600;
+		color: black;
+		text-decoration: none;
+	}
+	#linkDeco{
+		color: black;
+		text-decoration: none;
+	}
+	#link3 #link1{
+		transition: all 1.5s linear;
+		border-radius: 5%;
 		padding-right: 2%;
-	padding-left: 2%;
-}
-#link3 #link1:hover {
-	background-color: red;
-}
-
-/*PAGE INSCRIPTION*/
-
-#titleInscription {
-	font-size: 2.4em;
-	text-align: center;
-	margin-left: 2%;
-	text-shadow: 1px 1px 2px black;
-}
-
-.formulaireInscription {
-	width: 30%;
-	height: 100%;
-	border: 1px dashed black;
-	border-radius: 5px 5px;
-	background-color: #88ABC5;
-	margin-top: 6%;
-	margin-bottom: 10%;
-	margin-left: 35%;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	padding: 1.5%;
-}
-
-.fieldsetRegister {
-	width: auto;
-	height: auto;
-	border: 2px solid red;
-	border-radius: 5px 5px;
-	padding: 1%;
-	margin-bottom: 2%;
-}
-
-#legendInscription {
-	font-size: 1.3em;
-	font-weight: 600;
-}
-
-#inputRegister {
-	width: 98%;
-	height: auto;
-	transition: all 1s linear !important;
-	border-radius: 5px 5px;
-}
-
-#inputRegister:focus {
-	background-color: #9DD17B;
-}
-
-#inputRegisterSend {
-	width: 30%;
-	height: auto;
-	margin-left: 35%;
-	margin-top: 2%;
-	border-radius: 5px 5px;
-	font-family: roboto;
-	font-weight: 500;
-}
-
-.containerLinkConnexion {
-	margin-top: 2%;
-}
-
+		padding-left: 2%;
+	}
+	#link3 #link1:hover {
+		background-color: red;
+	}
 
 /*PAGE DE LOGIN/CONNEXION*/
+	#titleLogin {
+		font-size: 2.4em;
+		text-shadow: 1px 1px 2px black;
+		margin-top: 8%;
+		text-align: center;
+	}
+	.formLogin{
+		width: 50%;
+		height: auto;
+		margin-top: 4%;
+		margin-right: 25%;
+		margin-left: 25%;
+		display: inline-flex;
+		justify-content: space-around;
+	}
+	.fieldsetLogin{
+		width: auto !important;
+		height: auto;
+		background-color: #338A9E;
+	}
+	#legendLogin{
+		font-size: 1.6em;
+		text-shadow: 1px 1px 1px;
+	}
 
-#titleLogin {
-	font-size: 2.4em;
-	text-shadow: 1px 1px 2px black;
-	margin-top: 8%;
-	text-align: center;
-}
+	.tbodyLogin{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#inputLoginSubmit{
+		width: auto;
+		height: auto;
+		font-size: 1em;
+		font-weight: 600;
+		border-radius: 5%;
+		background-color: #338A9E;
+		box-shadow: 1px 1px 3px 1px;
+	}
+	#inputLogin {
+		transition: all 1s linear !important;
+		border-radius: 5px 5px;
+	}
+	#inputLogin:focus {
+		background-color: #9DD17B;
+	}
 
-.formLogin {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-bottom: 2%;
-}
+	#linkInscr{
+		width: 100%;
+		height: auto;
+	}
+	#imgLogin {
+		width: 100%;
+		height: auto;
+		margin-top: 5%;
+	}
 
-.fieldsetLogin {
-	width: auto;
-	height: auto;
-	padding-top: 1.5%;
-	border: 1px solid red;
-	box-shadow: 2px 2px 4px black;
-}
-
-#legendLogin {
-	font-size: 1.3em;
-}
-
-#imgLogin {
-	width: 100%;
-	height: auto;
-}
-#inputLogin {
-	transition: all 1s linear !important;
-	border-radius: 5px 5px;
-}
-#inputLogin:focus {
-	background-color: #9DD17B;
-}
-#inputLoginSubmit{
-	border-radius: 5%;
-	box-shadow: 1px 1px 3px 1px;
-}
-.containerLinkRegister {
-	margin-top: 2%;
-	text-align: center;
-}
-
+/*PAGE INSCRIPTION*/
+	#titleInscription {
+		font-size: 2.4em;
+		text-align: center;
+		margin-left: 2%;
+		text-shadow: 1px 1px 2px black;
+	}
+	#titleLegendInscription {
+		font-size: 1.3em;
+		text-shadow: 1px 1px 2px black;
+	}
+	.formulaireInscription {
+		width: 30%;
+		height: 100%;
+		border: 1px dashed black;
+		border-radius: 5px 5px;
+		background-color: #88ABC5;
+		margin-top: 6%;
+		margin-bottom: 10%;
+		margin-left: 35%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		padding: 1.5%;
+	}
+	.fieldsetRegister {
+		width: auto;
+		height: auto;
+		border: 2px solid red;
+		border-radius: 5px 5px;
+		padding: 1%;
+		margin-bottom: 2%;
+	}
+	#legendInscription {
+		font-size: 1.3em;
+		font-weight: 600;
+	}
+	#inputRegister {
+		width: 98%;
+		height: auto;
+		transition: all 1s linear !important;
+		border-radius: 5px 5px;
+	}
+	#inputRegister:focus {
+		background-color: #9DD17B;
+	}
+	#inputRegisterSend {
+		width: 30%;
+		height: auto;
+		margin-left: 35%;
+		margin-top: 2%;
+		border-radius: 5px 5px;
+		font-family: roboto;
+		font-weight: 500;
+	}
+	.containerLinkRegister {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		margin-top: 2%;
+	}
+	.containerLinkConnexion
 
 /*PAGE DE BLOG*/
+	#titlePostView {
+		font-size: 2.4em;
+		text-align: center;
+		margin-top: 8%;
+		text-shadow: 1px 1px 2px grey;
+	}
 
-#titleListPostsh1 {
-	text-align: center !important;
-	margin-top: 8%;
-	font-size: 2.4em;
-	text-shadow: 1px 1px 2px black;
-}
+	#retourBillet {
+		padding-left: 10%;
+		font-weight: 600;
+		color: rgb(45, 76, 128);
+	}
 
-#derniersBillets {
-	margin-left: 10%;
-}
-
-#titlePostView {
-	font-size: 2.4em;
-	text-align: center;
-	margin-top: 8%;
-	text-shadow: 1px 1px 2px grey;
-}
-
-#retourBillet {
-	padding-left: 10%;
-	font-weight: 600;
-	color: rgb(45, 76, 128);
-}
-
-#retourBillet:hover {
-	color: rgb(0, 173, 12);
-}
-
-
-/*MES CHAPITRES*/
-
-
-/*ARTICLE*/
-
-.news {
-	width: 80%;
-	height: 100%;
-	margin: 0 auto;
-	margin-bottom: 5%;
-	background-color: #88ABC5;
-	border: 1px solid black;
-	border-radius: 5px 5px;
-	text-align: justify-all;
-	padding: 2%;
-}
-
-#titleBillet {
-	text-align: center;
-	font-size: 1.6em;
-}
-
-#content {
-	font-weight: 400;
-	color: rgb(0, 0, 0);
-	font-size: 1.5em;
-}
-
+	#retourBillet:hover {
+		color: rgb(0, 173, 12);
+	}
+/*POSTVIEW*/
+	.news {
+		width: 80%;
+		height: 100%;
+		margin: 0 auto;
+		margin-bottom: 5%;
+		background-color: #88ABC5;
+		border: 1px solid black;
+		border-radius: 5px 5px;
+		text-align: justify-all;
+		padding: 2%;
+	}
+	#titleBillet {
+		text-align: center;
+		font-size: 1.6em;
+	}
+	#content {
+		font-weight: 400;
+		color: rgb(0, 0, 0);
+		font-size: 1.5em;
+	}
 
 /*PAGE COMMENTAIRES*/
-
-.containerFormComment {
-	width: 100%;
-	height: 100%;
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: space-around;
-	margin-bottom: 1.5%;
-}
-
-#titleComment {
-	width: auto;
-	height: auto;
-	text-align: center;
-	font-size: 1.8em;
-	text-shadow: 1px 1px 1px grey;
-	border-bottom: 2mm ridge rgba(97, 102, 93, .8);
-	padding-bottom: 2%;
-}
-
-#formulaireComment {
-	width: 40%;
-	height: 50%;
-	margin-top: 2%;
-	margin-right: 2%;
-	float: left;
-	background-color: #88ABC5;
-	border-radius: 5px 5px;
-	padding: 2%;
-}
-
-#fieldsetPost {
-	border: 1px solid red;
-	border-radius: 5px 5px;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
-
-#legendFormPost {
-	font-weight: 600;
-}
-
-#containerComment {
-	width: 30%;
-	height: 40%;
-	border-radius: 5px 5px;
-	background-color: #ffffff;
-	border: 1px solid black;
-	font-size: .9em;
-	margin-top: 2%;
-	padding: 2%;
-}
-
-#hrPost {
-	border-bottom: 2mm ridge rgba(97, 102, 93, .8);
-	margin-bottom: 3%;
-}
-
-#linkSuitPost {
-	width: 100%;
-	height: auto;
-	color: black;
-	border: 1px solid black;
-	border-radius: 5px 5px;
-	box-shadow: 2px 2px 3px 1px;
-	margin-top: 5%;
-	padding: 1%;
-	text-decoration-line: none;
-	transition: all 2s linear;
-}
-
-#linkSuitPost:hover {
-	background-color: #154F7F;
-}
-
+	.containerFormComment {
+		width: 100%;
+		height: 100%;
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: 1.5%;
+	}
+	#titleComment {
+		width: auto;
+		height: auto;
+		text-align: center;
+		font-size: 1.8em;
+		text-shadow: 1px 1px 1px grey;
+		border-bottom: 2mm ridge rgba(97, 102, 93, .8);
+		padding-bottom: 2%;
+	}
+	#formulaireComment {
+		width: 50%;
+		height: auto;
+		margin-top: 2%;
+		float: left;
+		background-color: #88ABC5;
+		border-radius: 5px 5px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#fieldsetPost {
+		width: 90%;
+		height: auto;
+		border: 1px solid red;
+		border-radius: 5px 5px;
+	}
+	#legendFormPost {
+		font-weight: 600;
+	}
+	#tablePostCom{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#tbodyPostView{
+		width: 100%;
+		height: auto;
+	}
+	#tdPostView{
+		width: 100%;
+		height: auto;
+	}	
+	#pseudoPostView{
+		width: 100%;
+		height: auto;
+	}
+	#containerComment {
+		width: 30%;
+		height: 40%;
+		border-radius: 5px 5px;
+		background-color: #ffffff;
+		border: 1px solid black;
+		font-size: .9em;
+		margin-top: 2%;
+		padding: 2%;
+	}
+	#hrPost {
+		border-bottom: 2mm ridge rgba(97, 102, 93, .8);
+		margin-bottom: 3%;
+	}
+	#linkSuitPost {
+		width: 100%;
+		height: auto;
+		color: black;
+		border: 1px solid black;
+		border-radius: 5px 5px;
+		box-shadow: 2px 2px 3px 1px;
+		margin-top: 5%;
+		padding: 1%;
+		text-decoration-line: none;
+		transition: all 2s linear;
+	}
+	#linkSuitPost:hover {
+		background-color: #154F7F;
+	}
 
 /*PAGE DE CONTACT*/
-
-.containerContact {
-	width: 100%;
-	height: 100%;
-	margin-bottom: 4%;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
-
-#titleContact {
-	font-size: 2.4em;
-	text-align: center;
-	margin-top: 2%;
-	text-shadow: 1px 1px 2px black;
-}
-
-.formContact {
-	width: auto;
-	height: 100%;
-	margin-top:0;
-	background-color: #88ABC5;
-	border-radius: 5px 5px;
-	display: inline-flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	padding: 1%;
-}
-
-.fieldsetContact {
-	width: auto;
-	height: auto;
-	border: 2px solid red;
-	background-color: #88ABC5;
-	border-radius: 5px 5px;
-	margin-bottom: 1%;
-}
-
-#legendContact {
-	font-size: 1.3em;
-}
-
-#inputContact {
-	transition: all 1s linear !important;
-	width: 98%;
-	height: auto;
-}
-
-#inputContact:focus {
-	background-color: #9DD17B;
-}
-
-#inputTextarea {
-	transition: all 1s linear !important;
-}
-
-#inputTextarea:focus {
-	background-color: rgb(168, 168, 168);
-}
-
-#buttonContact {
-	border-radius: 5px 5px;
-}
-
+	.containerContact {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 4%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#titleContact {
+		font-size: 2.4em;
+		text-align: center;
+		text-shadow: 1px 1px 2px black;
+		margin-bottom: 5%;
+		margin-top: 10%;
+	}
+	#titleLegendContact{
+		font-size: 1.3em;
+		text-shadow: 1px 1px 1px black;
+	}
+	.formContact {
+		width: 55%;
+		height: auto;
+		border-radius: 5px 5px;
+		background-color: #88ABC5;
+		margin-bottom: 10%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		display: inline-flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	.fieldsetContact {
+		width: 80%;
+		height: auto;
+		border: 2px solid red;
+		background-color: #88ABC5;
+		border-radius: 5px 5px;
+		margin-bottom: 1%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.tableContact{
+		width: 100%;
+		height: auto;
+	}
+	#legendContact {
+		font-size: 1.3em;
+	}
+	.labelContact{
+		width: 100%;
+		height: auto;
+		padding-left: 10%;
+	}
+	#inputContact {
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		border-radius: 10%;
+		transition: all 1s linear !important;
+	}
+	#inputContact:focus {
+		background-color: #9DD17B;
+	}
+	#inputTextarea {
+		width: 80%;
+		height: auto;
+		margin-left: 10%;
+		border-radius: 8%;
+		transition: all 1s linear !important;
+	}
+	#inputTextarea:focus {
+		background-color: rgb(168, 168, 168);
+	}
+	#buttonContact {
+		width: 20%;
+		height: auto;
+		font-size: 1em;
+		font-weight: 600;
+		box-shadow: 1px 1px 3px 1px;
+		border-radius: 5px 5px;
+		margin-top: 5%;
+		background-color: #338A9E;
+	}
 
 /* PAGE ADMINISTRATION */
-
-#titleAdministration {
-	text-align: center;
-	font-size: 2.4em;
-	margin-left: 2%;
-	text-shadow: 1px 1px 2px black;
-}
-#modifAdminEdit {
-	color: #154F7F;
-	font-weight: 600;
-	text-decoration: none;
-}
-#modifAdminDesignaler{
-	color: rgb(7, 136, 16);
-	font-weight: 600;
-	text-decoration: none;
-}
-#modifAdminDelete{
-	vertical-align: center;
-	color: #ba0009;
-	font-weight:600;
-	text-decoration: none;
-}
+	#titleAdministration {
+		text-align: center;
+		font-size: 2.4em;
+		margin-left: 2%;
+		text-shadow: 1px 1px 2px black;
+	}
+	#modifAdminEdit {
+		color: #154F7F;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	#modifAdminDesignaler{
+		color: rgb(7, 136, 16);
+		font-weight: 600;
+		text-decoration: none;
+	}
+	#modifAdminDelete{
+		vertical-align: center;
+		color: #ba0009;
+		font-weight:600;
+		text-decoration: none;
+	}
 
 /* BLOC CHAPITRES */
 
-#titleAdminChaptH2 {
-	text-align: center;
-	font-size: 2em;
-	text-shadow: 1px 1px 2px black;
-	color: #338A9E;
-}
-
-.containerChapAdmin {
-	border: 1px solid black;
-	margin-left: 1%;
-	margin-right: 1%;
-}
-
-#adminTabHeader {
-	width: 100%;
-	height: auto;
-	border: 2px solid black;
-}
-
-#adminTh {
-	border: 1px solid black;
-	background-color: rgb(0, 0, 0);
-	color: rgb(168, 168, 168);
-}
-
-.containerResponseChap {
-	border: 1px solid black;
-}
-
-#tdAdmin {
-	border: 1px solid black;
-	text-align: center;
-}
-
-#ChapterModif {
-	vertical-align: center;
-}
+	#titleAdminChaptH2 {
+		text-align: center;
+		font-size: 2em;
+		text-shadow: 1px 1px 2px black;
+		color: #338A9E;
+	}
+	.containerChapAdmin {
+		border: 1px solid black;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	#adminTabHeader {
+		width: 100%;
+		height: auto;
+		border: 2px solid black;
+	}
+	#adminTh {
+		border: 1px solid black;
+		background-color: rgb(0, 0, 0);
+		color: rgb(168, 168, 168);
+	}
+	.containerResponseChap {
+		border: 1px solid black;
+	}
+	#tdAdmin {
+		border: 1px solid black;
+		text-align: center;
+		background-color: rgb(187, 183, 183);
+	}
+	.tdAdminId{
+		font-weight: 600;
+		color:#154F7F;
+	}
+	.tdAdminTitle{
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 600;
+		font-size: .7em;
+	}
+	#ChapterModif {
+		vertical-align: center;
+	}
 
 /* PAGE AJOUT NOUVEAU CHAPITRE */
-#titleEditChapter{
-	text-align: center;
-	font-size: 2.4em;
-	text-shadow: 1px 1px 2px black;
-	margin-bottom: 8%;
-}
-#titleAddChapter{
-	text-align: center;
-	font-size: 2.4em;
-	text-shadow: 1px 1px 2px black;
-	margin-bottom: 8%;
-}
-
-#formulaireAddChapter {
-	width: 60%;
-	height: 25%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-bottom: 10%;
-	margin-left: 20%;
-	margin-right: 20%;
-}
-#fieldsetAddChap{
-	border:2px solid #338A9E;;
-	border-radius: 5%;
-}
-#tdAddChapter {
-	background-color: #338A9E;
-}
-#sumbitAddChapter{
-	width: 30%;
-	height: auto;
-	margin-top: 3%;
-}
+	#titleEditChapter{
+		text-align: center;
+		font-size: 2.4em;
+		text-shadow: 1px 1px 2px black;
+		margin-bottom: 8%;
+	}	
+	.editChapInput{
+		width: 99%;
+		height: auto;
+	}
+	#titleAddChapter{
+		text-align: center;
+		font-size: 2.4em;
+		text-shadow: 1px 1px 2px black;
+		margin-bottom: 8%;
+	}
+	#formulaireAddChapter {
+		width: 60%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 10%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	#fieldsetAddChap{
+		width: 100%;
+		height: auto;
+		font-size: 1.3em;
+		text-shadow: 1px 1px 2px;
+		border:2px solid #338A9E;
+		border-radius: 5%;
+	}
+	.tableEditChapter{
+		width: 100% !important;
+		height: auto;
+	}
+	#tdAddChapter {
+		background-color: #338A9E;
+	}
+	#sumbitAddChapter{
+		width: 20%;
+		height: auto;
+		font-size: 1em;
+		font-weight: 600;
+		margin-top: 3%;
+		background-color: #338A9E;
+		border-radius: 8%;
+	}
 
 /* BLOC COMMENTAIRE */
-#titleAdminComH2 {
-	text-align: center;
-	font-size: 2em;
-	text-shadow: 1px 1px 2px black;
-	color: #338A9E;
-}
+	#titleAdminComH2 {
+		text-align: center;
+		font-size: 2em;
+		text-shadow: 1px 1px 2px black;
+		color: #338A9E;
+	}
 
-.containerComAdmin {
-	border: 1px solid black;
-	margin-left: 1%;
-	margin-right: 1%;
-}
-
+	.containerComAdmin {
+		border: 1px solid black;
+		margin-left: 1%;
+		margin-right: 1%;
+	}
 
 /* BLOC USER */
-.containerUserAdmin {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-bottom: 5%;
-}
-
+	.containerUserAdmin {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-left: 1%;
+		margin-right: 1%;
+		margin-bottom: 5%;
+	}
 
 /* BLOC COMMENTAIRE SIGNALER */
-
-#titleAdminComH22 {
-	text-align: center;
-	font-size: 2em;
-	text-shadow: 1px 1px 2px black;
-	color: #ba0009;
-}
-
+	#titleAdminComH22 {
+		text-align: center;
+		font-size: 2em;
+		text-shadow: 1px 1px 2px black;
+		color: #ba0009;
+	}
 
 /* PAGE DE PROFIL UTILISATEUR */
-
-#titleProfil{
-	text-align: center;
-	font-size: 2.4em;
-	margin-left: 2%;
-	text-shadow: 1px 1px 2px black;
-}
-
-.containerAvatar{
-	width: 20%;
-	height: auto;
-	margin-right: 5%;
-	margin-bottom: 5%;
-	float: right;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;	
-	box-shadow: 2px 2px 4px 2px;
-	border: 1px dashed black;
-}
-#titleAvatar{
-	text-align: center;
-}
-#imgChoise{
-	width: 50%;
-	height: auto;
-	border-radius: 5%;
-	margin-left: 25%;
-	margin-bottom: 10%;
-}
-.containerComPost{
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
+	#titleProfil{
+		text-align: center;
+		font-size: 2.4em;
+		margin-left: 2%;
+		text-shadow: 1px 1px 2px black;
+	}
+	.containerAvatar{
+		width: 20%;
+		height: auto;
+		margin-right: 5%;
+		margin-bottom: 5%;
+		float: right;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		align-content: center;	
+		box-shadow: 2px 2px 4px 2px;
+		border: 1px dashed black;
+	}
+	#titleAvatar{
+		text-align: center;
+	}
+	#imgChoise{
+		width: 60%;
+		height: 100%;
+		border-radius: 2%;
+		position: relative;
+		left: 20%;
+		margin-bottom: 10%;
+	}
+	.containerComPost{
+		margin-top: 5%;
+		margin-bottom: 5%;
+	}
 
 /* PAGE PROFIL UTILISATEUR */
-.containerChapPost{
-	margin-left: 2%;
-	margin-right: 2%;
-	margin-bottom: 5%;
-}
-#lireLaSuiteChap{
-	font-size: 0.8em;
-	font-weight: 400;
-	text-decoration: none;
-}
-#signalementChap{
-	font-size: 0.8em;
-	color: red;
-	text-decoration: none;
-	font-weight: 600;
-	padding:3%;
-}
+	.containerChapPost{
+		margin-left: 2%;
+		margin-right: 2%;
+		margin-bottom: 5%;
+	}
+	#tableProfil{
+		width: 100%;
+		height: auto;
+		border: 1px dashed black;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+	#lireLaSuiteChap{
+		font-size: 0.8em;
+		font-weight: 400;
+		text-decoration: none;
+	}
+	#signalementChap{
+		font-size: 0.8em;
+		color: red;
+		text-decoration: none;
+		font-weight: 600;
+		padding:3%;
+	}
 
 /*-----------PIED DE PAGE----------*/
-footer {
-	width: auto;
-	height: auto;
-	border: 2px solid black;
-	font-size: 1.2em;
-	font-weight: 600;
-	padding-left: 10%;
-	padding-right: 10%;
-	background-color: #338A9E;
-	text-align: center;
-	margin-top: auto;
+	footer {
+		width: auto;
+		height: auto;
+		border: 2px solid black;
+		font-size: 1.2em;
+		font-weight: 600;
+		padding-left: 10%;
+		padding-right: 10%;
+		background-color: #338A9E;
+		text-align: center;
+		margin-top: auto;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE MOBILE */
+@media screen and (max-width: 479px)
+{
+	html{
+		width: 100%;
+		height: auto;
+	}
+	body{
+		width: 100%;
+		height: auto;
+	}
+	
+	.titleListPostsh1{
+		font-size: 1.5em;
+	}
+	#titlePostView{
+		text-align: center;
+	}
+	#titleBillet{
+		font-size: 1.3em;
+	}
+	#content{
+		font-size: 1em;
+	}
+	#formulaireComment{
+		width: 80% !important;
+		height: auto;
+	}
+	#fieldsetPost{
+		width: 100%;
+		height: auto;
+	}
+	#comment{
+		width: 280px;
+		height: auto;
+	}
+	#containerComment{
+		width: 80%;
+		height: auto;
+	}
+	#title1{
+		width: 100%;
+		height: auto;
+		font-size: .7em;
+		margin-right: 15%;
+	}
+	h1{
+		margin-top: 5%;
+		font-size: 1.8em !important;
+	}
+	nav{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	.menuNavSpan{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: space-around;
+		align-items: center;
+		margin-right: 15%;
+	}
+	ul {
+		width: 100%;
+		height: auto;
+		margin-left: 5%;
+		font-size: .8em;
+	}
+	li, #containerLiMenuNav{
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+	#link1 {
+		font-size: 0.8em;
+	}
+
+/* Page Administration */
+	#titleAdministration {
+		text-align: center;
+		padding-right: 5%;
+		}
+	.containerChapAdmin{
+		font-size: .6em;
+	}
+	#adminTabHeader{
+		width: 100%;
+		height: auto;
+	}
+	.containerComAdmin{
+		font-size: .6em;
+		width: 100%;
+		height: auto;
+	}
+	.containerUserAdmin{
+		font-size: .6em;
+	}
+	/* Page profil */
+
+	.containerAvatar{
+		width: 80%;
+		height: auto;
+		margin-right: 10%;
+	}
+	#tdAdmin{
+		font-size: .7em;
+	}
+	#lireLaSuiteChap{
+		font-weight: 600;
+	}
+/* Page Connexion */
+	#titleLogin {
+		font-size: 1.2em;
+		text-shadow: 1px 1px 2px black;
+		margin-top: 12%;
+		text-align: center;
+	}
+	.formLogin{
+		width: 100%;
+		height: auto;
+		margin-top: 5%;
+		margin-right: 0;
+		margin-left: 0;
+		font-size: .7em;
+	}
+	.fieldsetLogin{
+		width: auto;
+		height: auto;
+		background-color: #338A9E;
+		border-radius: 5%;
+		padding: 3%;
+	}
+	#legendLogin{
+		font-size: 1.8em;
+		text-shadow: 1px 1px 1px;
+	}
+	#tableLogin{
+		width: auto;
+		height: auto;
+	}
+	.tbodyLogin{
+		width: auto;
+		height: auto;
+	}
+	.containerLoginTr{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	#inputLogin{
+		width: 100%;
+		height: auto;
+	}
+	#inputLoginSubmit{
+		width: auto;
+		height: auto;
+		font-size: .7em;
+		font-weight: 600;
+		border-radius: 5%;
+		background-color: #338A9E;
+		box-shadow: 1px 1px 3px 1px;
+	}
+	#linkInscr{
+		width: 100%;
+		height: auto;
+		font-size: .7em;
+	}
+	#imgLogin {
+		width: 100%;
+		height: auto;
+		margin-top: 10%;
+		margin-bottom: 5%;
+	}
+
+/* Page PostView */
+	.containerFormComment{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	#formulaireComment{
+		width: 60%;
+		height: auto;
+	}
+	#fieldsetPost{
+		font-size: .7em;
+		width: 50%;
+		height: auto;
+		margin: 0;
+	}
+	#tablePostCom{
+		width: 100%;
+		height: auto;
+	}
+	#pseudoPostView{
+		width: 100%;
+		height: auto;
+	}
+	#contentTemplate{
+		margin-top: 50%;
+	}
+	.formContact{
+		width: 80%;
+		height: auto;
+		margin-bottom: 35%;
+	}
+	#buttonContact{
+		width: 50%;
+		height: auto;
+	}
+	#formulaireAddChapter {
+		width: auto;
+		height: auto;
+		font-size: .9em;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 10%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#fieldsetAddChap{
+		width: auto;
+		height: auto;
+	}
+	footer{
+		font-size: 1em;
+	}
+}
+
+/* RESPONSIVE MOBILE GRAND FORMAT */
+@media screen and (min-width:480px) and (max-width:960px)
+{
+	.titleListPostsh1{
+		margin-top: 20%;
+		margin-bottom: 10%;
+	}
+	#titlePostView{
+		text-align: center;
+		margin-top: 15%;
+	}
+	#titleLogin{
+		margin-top: 15%;
+	}
+	#imgLogin{
+		margin-bottom: 15%;
+	}
+	#buttonContact{
+		width: 50%;
+		height: auto;
+	}
+	#titleContact{
+		margin-top: 20%;
+	}
+	.containerContact{
+		margin-bottom: 25%;
+	}
+	#titleAdministration{
+		margin-top: 25%;
+	}
+	.containerFormComment{
+		width: 90%;
+		height: auto;
+		margin-left: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	#formulaireComment{
+		width: 100%;
+		height: auto;
+	}
+	#containerComment{
+		width: 90%;
+		height: auto;
+	}
+}
+
+/* RESPONSIVE TABLETTE */
+@media screen and (min-width:961px) and (max-width:1024px)
+{
+	.titleListPostsh1{
+		margin-top: 15%;
+		margin-bottom: 10%;
+	}
+	#titleAdministration{
+		margin-top: 15%;
+	}
+	#titleLogin{
+		margin-top: 15%;
+	}
+	#titleContact{
+		margin-top: 15%;
+	}
+	.containerFormComment{
+		width: 65%;
+		height: auto;
+		margin-left: 17.5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+	}
+	#containerComment{
+		width: 100%;
+		height: auto;
+	}	
+	#formulaireComment{
+		width: 100%;
+		height: auto;
+	}
+	#titleProfil{
+		margin-top: 15%;
+	}
+	.containerAvatar{
+		width: 40%;
+		height: auto;
+		margin-top: 5%;
+		margin-bottom: 10%;
+		margin-right: 30%;
+	}
+	#lireLaSuiteChap{
+		font-weight: 600;
+	}
+	#imgLogin{
+		margin-bottom: 20%;
+	}
+	#titleContact{
+		margin-top: 15%;
+	}
+	#buttonContact{
+		width: 50%;
+		height: auto;
+	}
+	footer{
+		margin-top:40%;
+	}
 }
