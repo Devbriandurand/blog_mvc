@@ -58,7 +58,7 @@ try
                     {
                         if ($_POST['password'] == $_POST['password2'])
                         {
-                            Member($_POST['pseudo'], crypt($_POST['password']));
+                            Member($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT));
                             header('Location: index.php?action=connexion');
                         }
                         else
