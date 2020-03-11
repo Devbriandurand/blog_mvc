@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 
-<h1 id="titleListPostsh1">Billet simple pour l'Alaska</h1>
+<h1 class="titleListPostsh1">BILLET SIMPLE POUR L'ALASKA !</h1>
 
 <p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
 
