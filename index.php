@@ -84,16 +84,15 @@ try
             {
                 if (isset($_POST['username']) && $_POST['mdp'])
                 {
-                    if (!empty($_POST['username']) or !empty($_POST['mdp']))
+                    if (!empty($_POST['username']) && !empty($_POST['mdp']))
                     {
                         login($_POST['username'], $_POST['mdp']);
-                         session_start();
-                    }
-                    else
-                    {
-                        throw new Exception('Veuillez saisir tous les champs !');
                     }
                 }
+                else
+                    {
+                        throw new Exception('Veuillez saisir tout les champs');
+                    }
             }
             else
             {
@@ -111,6 +110,7 @@ try
             }
                 
         }
+
 //Afficher la page profil
         elseif ($_GET['action'] == 'profil')
         {
@@ -121,7 +121,6 @@ try
             }
         }
 
-
 //Afficher la page edition chapitre
         elseif($_GET['action'] == "afficherEditChapter")
         {       
@@ -129,18 +128,9 @@ try
         } 
 //On ajoute le chapitre modifier
         elseif($_GET['action'] == "editChapter")
-                {
-                    editChapter($_GET['id'], $_POST['title'], $_POST['content']);
-                }
-
-       
-
-
-
-
-
-
-
+        {
+                editChapter($_GET['id'], $_POST['title'], $_POST['content']);
+        }
 
 //Afficher la page ajout d'un nouveau chapitre
         elseif($_GET['action'] == "afficherFormAddChap")
@@ -148,9 +138,10 @@ try
                 afficherFormAddChap();
         }
 //Ajoute un nouveau chapitre
-        elseif($_GET['action'] == "addChapitre"){
+        if($_GET['action'] == "addChapitre"){
                 addChapitre($_POST);
         }
+
 //Verification suppression chapitre
         elseif($_GET['action'] == "deleteChapter")
         {
@@ -164,13 +155,15 @@ try
 //Verification suppression user
         elseif($_GET['action'] == "deleteUser")
         {
-                deletComment($_GET['id']); 
+                deletUser($_GET['id']); 
         }
+
 //Signaler commentaire
         elseif($_GET['action'] == "signalerCom")
         {
                 signalComment($_GET['id']); 
         }
+        
 //Désignaler commentaire
         elseif($_GET['action'] == "designalementComment")
         {
