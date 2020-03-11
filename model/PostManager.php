@@ -21,6 +21,7 @@ class PostManager extends Manager
 
         return $post;
     }
+    
 //Requete permettant d'inserer une ligne dans la table post(chapitre)
     public function addChapter($title, $content)
     {
@@ -28,7 +29,6 @@ class PostManager extends Manager
         $req = $db->prepare('INSERT INTO posts (title, content, creation_date) VALUE (?,?,NOW())');
         $req->execute(array($title, $content));
     }
-
 
 //Requete permettant de modifier et d'inserer le chapitre éditer
         public function updateChapter($postId, $chapTitle, $chapContent)
@@ -40,9 +40,3 @@ class PostManager extends Manager
     }
 
 }
-
-
-
-
-        // $req = $db->prepare('UPDATE posts SET title = "?", content="?" WHERE id = ?');
-        // $req->execute(array( $chapTitle, $chapContent, $postId));
