@@ -1,6 +1,6 @@
 		<nav>
-		    <h1><a id="title1" href="http://localhost/blog_mvc/">JEAN FORTEROCHE - ÉCRIVAIN</a></h1>
-		    <span>
+		    <h1 id="titleMenuNav"><a id="title1" href="http://projet4.brian-durand.com">JEAN FORTEROCHE - ÉCRIVAIN</a></h1>
+		    <span class="menuNavSpan">
 		        <ul>
 					<li id="containerLiMenuNav"><a id="link1" href="index.php">Blog</a></li>
 
