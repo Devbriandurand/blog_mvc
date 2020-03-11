@@ -4,7 +4,7 @@
 <form id="formulaireAddChapter" action="index.php?action=addChapitre" method="post">
     <fieldset  id="fieldsetAddChap">
         <legend align="center" id="legendFormPost">AJOUTE UN NOUVEAU CHAPITRE</legend>
-            <table>
+            <table class="tableEditChapter">
                 <tr>
                     <td id="tdAddChapter">
                         <label for="title"><strong>TITRE DU CHAPITRE</strong></label>
