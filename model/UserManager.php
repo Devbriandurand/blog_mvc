@@ -3,7 +3,7 @@ namespace Brian\Blog\Model;
 require_once("model/Manager.php");
 
 class UserManager extends Manager
-{   //Cette fonction nous permets de prepare une requete afin de selectionné l'id & pseudo sachant que nous n'avons pas la valeur de pseudo ni de password
+{  
 		public function verify($username, $mdp)
     {
         $db = $this->dbConnect();
