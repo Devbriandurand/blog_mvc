@@ -91,6 +91,7 @@ require_once ('controller/frontend/frontend.php');
 
         header('Location: index.php?action=administration');
     }
+
 //SUPRESSION USER
     function deletUser($userId)
     {
@@ -99,6 +100,7 @@ require_once ('controller/frontend/frontend.php');
 
         header('Location: index.php?action=administration');
     }
+
 //DÉSIGNALEMENT D'UN COMMENTAIRE
     function designalerComment($commentId)
     {
@@ -106,6 +108,13 @@ require_once ('controller/frontend/frontend.php');
         $commentManager->alertComment($commentId);
 
         header('Location: index.php?action=administration');
+    }
+    
+//AFFICHE LA PAGE ADD CHAPITRE
+    function afficherFormAddChap()
+    {
+        $postManager = new Brian\Blog\Model\PostManager();
+        require ('view/backend/addChapterView.php');
     }
 
 //AJOUT D'UN CHAPITRE
@@ -122,7 +131,14 @@ require_once ('controller/frontend/frontend.php');
         }
     }
 
+//AFFICHE LA PAGE EDIT CHAPITRE
+function afficherPageEditChapter($postId)
+{
+    $chapterManager = new Brian\Blog\Model\PostManager();
+    $chapter = $chapterManager->getPost($postId);
 
+    require ('view/backend/editChapterView.php');
+}
 
 //EDIT CHAPITRE
     function editChapter($postId, $chapTitle, $chapContent)
@@ -134,25 +150,3 @@ require_once ('controller/frontend/frontend.php');
     }
 
 
-
-
-
-
-
-
-
-
-//AFFICHE LA PAGE ADD CHAPITRE
-    function afficherFormAddChap()
-    {
-        require ('view/backend/addChapterView.php');
-    }
-
-//AFFICHE LA PAGE EDIT CHAPITRE
-function afficherPageEditChapter($postId)
-{
-    $chapterManager = new Brian\Blog\Model\PostManager();
-    $chapter = $chapterManager->getPost($postId);
-
-    require ('view/backend/editChapterView.php');
-}
