@@ -242,9 +242,8 @@ body {
 /*PAGE DE BLOG*/
 	#titlePostView {
 		font-size: 2.4em;
-		text-align: center;
 		margin-top: 8%;
-		text-shadow: 1px 1px 2px grey;
+		text-shadow: 1px 1px 2px grey !important;
 	}
 
 	#retourBillet {
@@ -256,6 +255,7 @@ body {
 	#retourBillet:hover {
 		color: rgb(0, 173, 12);
 	}
+	
 /*POSTVIEW*/
 	.news {
 		width: 80%;
@@ -931,7 +931,8 @@ body {
 	.formContact{
 		width: 80%;
 		height: auto;
-		margin-bottom: 35%;
+		margin-top: 15%;
+		margin-bottom: 30%;
 	}
 	#buttonContact{
 		width: 50%;
