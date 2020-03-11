@@ -14,6 +14,7 @@ class CommentManager extends Manager
         return $comments;
     }
 
+//Selectionne tous les commentaires
         public function commentsGet()
     {   
         $db = $this->dbConnect();
@@ -30,7 +31,6 @@ class CommentManager extends Manager
 
         return $affectedLines;
     }
-
     
 //SIGNALER UN COMMENTAIRE
     public function signalManagerComment($CommentId)
@@ -40,7 +40,6 @@ class CommentManager extends Manager
         $comments->execute(array($CommentId));
     }
 
-    
 // DESIGNALER UN COMMENTAIRE
     public function alertComment($CommentId)
     {  
@@ -60,7 +59,6 @@ class CommentManager extends Manager
         $comments->execute(array($CommentId));
     }
     
-
 //SUPPRIMER UN CHAPITRE
     public function deleteChapter($ChapterId)
     {  
@@ -78,25 +76,4 @@ class CommentManager extends Manager
 
         $users->execute(array($userId));
     }
-
-
-
-    // // Signaler un commentaire.
-    // public function reportComment($id) {
-    //     $db = $this->newManager->dbConnect();
-    //     $request = $db->prepare('UPDATE comments SET alert = 1 WHERE id = ?');
-    //     $request->execute(array($id));
-    // }
-
-    // //Editer un commentaire
-    // public function editComment($postId, $author, $comment)
-    // {
-    //     $db = $this->dbConnect();
-    //     $request = $db->prepare('UPDATE comments SET comment= ?, comment_date = NOW() WHERE id =?');
-    //     $comment = $request->execute(array($comment, $id));
-    //     //resultat
-    //     return $comment;
-    // }
-
-
 }
