@@ -32,8 +32,8 @@
         </tr>
         <?php foreach ($chapters as $chapter) : ?>
             <tr>
-                <td id="tdAdmin"><?= $chapter['id'] ?></td>
-                <td id="tdAdmin"><?= $chapter['title'] ?></td>
+                <td class="tdAdminId" id="tdAdmin"><?= $chapter['id'] ?></td>
+                <td class="tdAdminTitle" id="tdAdmin"><?= $chapter['title'] ?></td>
                 <td id="tdAdmin"><?= $chapter['content'] ?></td>
                 <td id="tdAdmin"><?= $chapter['creation_date_fr'] ?></td>
                 <td id="tdAdmin">
@@ -77,7 +77,7 @@
         </tr>
         <?php foreach ($comments as $comment) : ?>
             <tr>
-                <td id="tdAdmin"><?= $comment['id'] ?></td>
+                <td class="tdAdminId" id="tdAdmin"><?= $comment['id'] ?></td>
                 <td id="tdAdmin"><?= $comment['post_id'] ?></td>
                 <td id="tdAdmin"><?= $comment['author'] ?></td>
                 <td id="tdAdmin"><?= $comment['comment'] ?></td>
@@ -120,7 +120,7 @@
 
         <?php foreach ($users as $user) : ?>
             <tr>
-                <td id="tdAdmin"><?= $user['id'] ?></td>
+                <td class="tdAdminId" id="tdAdmin"><?= $user['id'] ?></td>
                 <td id="tdAdmin"><?= $user['pseudo'] ?></td>
                 <td id="tdAdmin"><?= $user['password'] ?></td>
                 <td id="tdAdmin"><?= $user['admin'] ?></td>
