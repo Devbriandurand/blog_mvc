@@ -1,23 +1,14 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
-	<title>Le super blog de Jean Forteroche></title>
-</head>
-<body>
-	<?php ob_start(); ?>
+<?php ob_start(); ?>
+<?php $title = 'titleContact' ?>
 <h1 id="titleContact">CONTACTER MOI</h1>
 		<section class="containerContact">
 			<form action="index.php?action=contact" method="POST"  class="formContact">
 				<fieldset class='fieldsetContact'>
-					<legend align='center'><strong>Formulaire de contact</strong></legend>
+					<legend id="titleLegendContact" align='center'><strong>Formulaire de contact</strong></legend>
 	 					<table class="tableContact">
 	 						<tr>
 	 							<td>
-	 								<label for="nom">Nom</label>
+	 								<label class="labelContact" for="nom">Nom</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
@@ -27,7 +18,7 @@
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<label for="prenom">Prénom</label>
+	 								<label class="labelContact" for="prenom">Prénom</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
@@ -37,7 +28,7 @@
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<label for="email">E-mail</label>
+	 								<label class="labelContact" for="email">E-mail</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
@@ -47,12 +38,12 @@
 	 						</tr>
 	 						<tr>
 	 							<td>
-	 								<label>Message</label>
+	 								<label class="labelContact" >Message</label>
 	 							</td>
 	 						</tr>
 	 						<tr>
-	 							<td>
-	 								<textarea id="inputTextarea" placeholder="Veuillez saisir votre message..." rows="10" cols="50" required></textarea>
+	 							<td id="tdTextareaContact">
+	 								<textarea id="inputTextarea" placeholder="Veuillez saisir votre message..." required></textarea>
 	 							</td>
 	 						</tr>
 	 						<tr>
