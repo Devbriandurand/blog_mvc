@@ -1,20 +1,22 @@
 <?php
 // Chargement des classes
+use Brian\Blog\Model\CommentManager;
+use Brian\Blog\Model\PostManager;
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 
 //Affiche les elements de listpost
  function listPosts()
 {
-    $postManager = new Brian\Blog\Model\PostManager();
+    $postManager = new PostManager();
     $posts = $postManager->getPosts();
     require('view/frontend/listPostsView.php');
 }
 
  function post()
 {
-    $postManager = new Brian\Blog\Model\PostManager();
-    $commentManager = new Brian\Blog\Model\CommentManager();
+    $postManager = new PostManager();
+    $commentManager = new CommentManager();
     $post = $postManager->getPost($_GET['id']);
     $comments = $commentManager->getComment($_GET['id']);
     require('view/frontend/postView.php');
@@ -23,7 +25,7 @@ require_once('model/CommentManager.php');
 //Ajout d'un commentaire
     function addComment($postId, $author, $comment)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $affectedLines = $commentManager->postComment($postId, $author, $comment);
 
         if ($affectedLines === false) 
@@ -38,17 +40,16 @@ require_once('model/CommentManager.php');
 //Signalement d'un commentaire
     function signalComment($commentId)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $commentManager->signalManagerComment($commentId);
 
         header('Location: index.php');
     }
 
-
 //Déclaration page profil utilisateur
     function afficherProfil()
     {
-        $chpt = new Brian\Blog\Model\PostManager();
+        $chpt = new PostManager();
         $chapters = $chpt->getPosts();
         require('view/frontend/profil.php');
     }
