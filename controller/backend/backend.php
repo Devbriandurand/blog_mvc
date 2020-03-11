@@ -1,4 +1,7 @@
 <?php
+use Brian\Blog\Model\UserManager;
+use Brian\Blog\Model\CommentManager;
+use Brian\Blog\Model\PostManager;
 //CHARGEMENT DES CLASS
 require_once ('model/PostManager.php');
 require_once ('model/CommentManager.php');
@@ -8,7 +11,7 @@ require_once ('controller/frontend/frontend.php');
 //VERIFIE PUIS INSCRIT UN UTILISATEUR
     function newAdmin($username, $mdp)
     {
-        $log = new Brian\Blog\Model\UserManager();
+        $log = new UserManager();
         $verify = $log->verify($login, $mdp);
         if (isset($verify['username']))
         {
@@ -23,19 +26,22 @@ require_once ('controller/frontend/frontend.php');
 //VERIFICATION DE CONNEXION ADMIN/USER
     function login($username, $mdp)
     {
-        $log = new Brian\Blog\Model\UserManager();
-        $verify = $log->verify($username, $mdp);
-        if ($verify['admin'] == 1)
+        $log = new UserManager();
+        $user = $log->verify($username);
+        if(password_verify($mdp,$user['password'] ))
         {
-            $_SESSION['admin'] = 1;
-            $_SESSION['pseudo'] = $verify['pseudo'];
-            header('Location: index.php?action=administration');
-        }
-        elseif ($verify['admin'] == 0)
-        {
-            $_SESSION['admin'] = 0;
-            $_SESSION['pseudo'] = $verify['pseudo'];
-            header('Location: index.php?action=profil');
+            if ($user['admin'] == 1)
+            {
+                $_SESSION['admin'] = 1;
+                $_SESSION['pseudo'] = $user['pseudo'];
+                header('Location: index.php?action=administration');
+            }
+            elseif ($user['admin'] == 0)
+            {
+                $_SESSION['admin'] = 0;
+                $_SESSION['pseudo'] = $user['pseudo'];
+                header('Location: index.php?action=profil');
+            }
         }
         else
         {
@@ -46,7 +52,7 @@ require_once ('controller/frontend/frontend.php');
 //AJOUT UN NOUVEL UTILISATEUR (PSEUDO&PASSWORD)
     function Member($pseudo, $password)
     {
-        $mbr = new Brian\Blog\Model\UserManager();
+        $mbr = new UserManager();
         $affectedLines = $mbr->addmember($pseudo, $password);
 
         if ($affectedLines)
@@ -63,13 +69,13 @@ require_once ('controller/frontend/frontend.php');
 //AFFICHE LA PAGE ADMINISTRATION 
     function afficherAdministration()
     {
-        $chpt = new Brian\Blog\Model\PostManager();
+        $chpt = new PostManager();
         $chapters = $chpt->getPosts();
 
-        $com = new Brian\Blog\Model\CommentManager();
+        $com = new CommentManager();
         $comments = $com->commentsGet();
 
-        $usr = new Brian\Blog\Model\UserManager();
+        $usr = new UserManager();
         $users = $usr->getUsers();
         require('view/backend/administration.php');
     }
@@ -77,7 +83,7 @@ require_once ('controller/frontend/frontend.php');
 //SUPRESSION CHAPITRE
     function deletChapter($chapterId)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $commentManager->deleteChapter($chapterId);
 
         header('Location: index.php?action=administration');
@@ -86,7 +92,7 @@ require_once ('controller/frontend/frontend.php');
 //SUPRESSION COMMENTAIRE
     function deletComment($commentId)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $commentManager->deleteComment($commentId);
 
         header('Location: index.php?action=administration');
@@ -95,7 +101,7 @@ require_once ('controller/frontend/frontend.php');
 //SUPRESSION USER
     function deletUser($userId)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $commentManager->deleteUser($userId);
 
         header('Location: index.php?action=administration');
@@ -104,7 +110,7 @@ require_once ('controller/frontend/frontend.php');
 //DÉSIGNALEMENT D'UN COMMENTAIRE
     function designalerComment($commentId)
     {
-        $commentManager = new Brian\Blog\Model\CommentManager();
+        $commentManager = new CommentManager();
         $commentManager->alertComment($commentId);
 
         header('Location: index.php?action=administration');
@@ -113,14 +119,14 @@ require_once ('controller/frontend/frontend.php');
 //AFFICHE LA PAGE ADD CHAPITRE
     function afficherFormAddChap()
     {
-        $postManager = new Brian\Blog\Model\PostManager();
+        $postManager = new PostManager();
         require ('view/backend/addChapterView.php');
     }
 
 //AJOUT D'UN CHAPITRE
     function addChapitre($arrayChap)
     {
-        $postManager = new Brian\Blog\Model\PostManager();
+        $postManager = new PostManager();
         $affectedLines = $postManager->addChapter($arrayChap['title'],$arrayChap['content'] );
         if ($affectedLines === false) 
         {
@@ -134,7 +140,7 @@ require_once ('controller/frontend/frontend.php');
 //AFFICHE LA PAGE EDIT CHAPITRE
 function afficherPageEditChapter($postId)
 {
-    $chapterManager = new Brian\Blog\Model\PostManager();
+    $chapterManager = new PostManager();
     $chapter = $chapterManager->getPost($postId);
 
     require ('view/backend/editChapterView.php');
@@ -143,7 +149,7 @@ function afficherPageEditChapter($postId)
 //EDIT CHAPITRE
     function editChapter($postId, $chapTitle, $chapContent)
     {
-        $postManager = new Brian\Blog\Model\PostManager();
+        $postManager = new PostManager();
         $post = $postManager->updateChapter($postId, $chapTitle, $chapContent);
 
         header('Location: index.php?action=administration');
