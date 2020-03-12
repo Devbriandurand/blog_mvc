@@ -1,8 +1,8 @@
 <?php ob_start(); ?>
 
-<?php $title = 'titlePostView' ?>
+<?php $title = 'titlePost' ?>
 
-<h1 id="titlePostView">Mes chapitres !</h1>
+<h1 class="titlePostView" align="center">Mes chapitres !</h1>
 
 <p><a id="retourBillet" href="index.php">Retour à la liste des billets</a></p>
 
@@ -11,7 +11,6 @@
         <?= htmlspecialchars($post['title']) ?>
         <em>le <?= $post['creation_date_fr'] ?></em>
     </h3>
-    
     <p id="content">
         <?= nl2br(htmlspecialchars($post['content'])) ?>
     </p>
@@ -26,33 +25,33 @@
         <legend align="center" id="legendFormPost">LAISSER MOI VOTRE AVIS</legend>
             <table id="tablePostCom">
                 <tbody id="tbodyPostView">
-            <tr>
-                <td>
-                    <label for="author"><strong>Auteur</strong></label>
-                </td>
-            </tr>
-            <tr>
-                <td align='center'>
-                    <input id="pseudoPostView" type="text" name="author" placeholder="Pseudo">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="comment"><strong>Commentaire</strong></label>        
-                </td>
-            </tr>
-            <tr>
-                <td id="textareaPostView">
-                    <textarea id="comment" name="comment" placeholder="Vous n'alliez tout de même pas partir sans me laisser un commentaire ?! ^_^" rows="15" cols="75"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td align='center'>
-                    <input type="submit" value="Envoyer">
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                    <tr>
+                        <td>
+                            <label for="author"><strong>Auteur</strong></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            <input id="pseudoPostView" type="text" name="author" placeholder="Pseudo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="comment"><strong>Commentaire</strong></label>        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="textareaPostView">
+                            <textarea id="comment" name="comment" placeholder="Vous n'alliez tout de même pas partir sans me laisser un commentaire ?! ^_^" rows="15" cols="75"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align='center'>
+                            <input type="submit" value="Envoyer">
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
     </fieldset>
 </form>
 
