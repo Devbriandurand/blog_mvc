@@ -1,14 +1,14 @@
 <?php ob_start(); ?>
 
-<h1 class="titleListPostsh1">BILLET SIMPLE POUR L'ALASKA !</h1>
+    <h1 class="titleListPostsh1">BILLET SIMPLE POUR L'ALASKA !</h1>
 
-<p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
+        <p id="derniersBillets"><strong>Derniers billets du blog :</strong></p>
 
+        <div class="news">
 <?php
-while ($data = $posts->fetch())
-{
+    while ($data = $posts->fetch())
+    {
 ?>
-    <div class="news">
         <h3>
             <?= htmlspecialchars($data['title']) ?>
             <em>le <?= $data['creation_date_fr'] ?></em>
@@ -19,10 +19,11 @@ while ($data = $posts->fetch())
             <br /><br /> <br /><br />
             <em><a id="linkSuitPost" href="index.php?action=post&amp;id=<?= $data['id'] ?>"><strong>lire la suite</strong></a></em>
         </p>
+        <hr id="hrListPosts">
     </div>
 <?php
-}
-$posts->closeCursor();
+    }
+    $posts->closeCursor();
 ?>
 <?php $content = ob_get_clean(); ?>
 
