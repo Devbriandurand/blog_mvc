@@ -78,7 +78,7 @@
         <?php foreach ($comments as $comment) : ?>
             <tr>
                 <td class="tdAdminId" id="tdAdmin"><?= $comment['id'] ?></td>
-                <td id="tdAdmin"><?= $comment['post_id'] ?></td>
+                <td class="tdPostId" id="tdAdmin"><?= $comment['post_id'] ?></td>
                 <td id="tdAdmin"><?= htmlspecialchars($comment['author']) ?></td>
                 <td id="tdAdmin"><?= htmlspecialchars($comment['comment']) ?></td>
                 <td id="tdAdmin"><?= $comment['comment_date'] ?></td>
