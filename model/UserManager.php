@@ -4,11 +4,11 @@ require_once("model/Manager.php");
 
 class UserManager extends Manager
 {  
-		public function verify($username, $mdp)
+		public function verify($username)
     {
         $db = $this->dbConnect();
-        $req = $db->prepare('SELECT id, pseudo, admin FROM users WHERE pseudo = ? AND password = ?');
-        $req->execute(array($username, $mdp));
+        $req = $db->prepare('SELECT * FROM users WHERE pseudo = ?');
+        $req->execute(array($username));
         return $req->fetch();
     }
 
