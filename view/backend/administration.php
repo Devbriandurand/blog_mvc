@@ -79,8 +79,8 @@
             <tr>
                 <td class="tdAdminId" id="tdAdmin"><?= $comment['id'] ?></td>
                 <td id="tdAdmin"><?= $comment['post_id'] ?></td>
-                <td id="tdAdmin"><?= $comment['author'] ?></td>
-                <td id="tdAdmin"><?= $comment['comment'] ?></td>
+                <td id="tdAdmin"><?= htmlspecialchars($comment['author']) ?></td>
+                <td id="tdAdmin"><?= htmlspecialchars($comment['comment']) ?></td>
                 <td id="tdAdmin"><?= $comment['comment_date'] ?></td>
                 <td id="tdAdmin"><?= $comment['signalement'] ?></td>
                 <td id="tdAdmin">
